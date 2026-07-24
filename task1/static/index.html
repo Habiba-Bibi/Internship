@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intern Performance Predictor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Intern Performance Predictor</h1>
+            <p>Predict an intern's future success based on their initial metrics.</p>
+        </header>
+
+        <div class="glass-card">
+            <form id="predictionForm">
+                <div class="input-group">
+                    <label for="completion_time">Completion Time (Hours)</label>
+                    <input type="number" id="completion_time" step="0.01" placeholder="e.g. 4.5" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="feedback_rating">Feedback Rating (1 - 5)</label>
+                    <input type="number" id="feedback_rating" step="0.01" min="1" max="5" placeholder="e.g. 3.8" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="attendance">Attendance (%)</label>
+                    <input type="number" id="attendance" step="0.01" min="0" max="100" placeholder="e.g. 92.5" required>
+                </div>
+
+                <button type="submit" class="primary-btn">Analyze Performance</button>
+            </form>
+            
+            <div id="result" class="result-hidden">
+                <h2>Prediction Result</h2>
+                <div class="score-display">
+                    <span id="scoreValue">--</span>
+                    <span id="scoreLabel">Points</span>
+                </div>
+                <div class="category-display" id="categoryValue">
+                    --
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
