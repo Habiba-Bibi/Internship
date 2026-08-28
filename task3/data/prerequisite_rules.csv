@@ -1,0 +1,4 @@
+rule_id,target_course_id,target_course_title,prerequisite_course_id,prerequisite_course_title,rule_description,enforcement_level
+PREREQ-1,CRS-110,Machine Learning Algorithms & Predictive Modeling,CRS-108,Python for Data Science & Scientific Computing,Must complete Python for Data Science (CRS-108) before attempting Machine Learning Algorithms (CRS-110).,Strict
+PREREQ-2,CRS-103,Full-Stack Web Development with React & Next.js,CRS-102,Modern JavaScript (ES6+) & TypeScript Core,Must complete Modern JavaScript & TypeScript (CRS-102) before enrolling in Full-Stack Web Development (CRS-103).,Strict
+PREREQ-3,CRS-117,CI/CD Pipelines & DevOps Automation,CRS-115,"Cloud Infrastructure Fundamentals (AWS, Azure & GCP)",Must complete Cloud Infrastructure Fundamentals (CRS-115) before taking CI/CD Pipelines & DevOps Automation (CRS-117).,Strict
