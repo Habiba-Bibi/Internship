@@ -1,0 +1,31 @@
+{
+  "id": "job_backend_intern",
+  "title": "Backend Engineering Intern",
+  "department": "Platform & Infrastructure Services",
+  "level": "Internship / Co-op",
+  "duration": "12 Weeks",
+  "location": "Seattle, WA / Hybrid",
+  "company_overview": "We build scalable, distributed microservices handling hundreds of thousands of transactions per minute with sub-second latencies.",
+  "responsibilities": [
+    "Design and build RESTful and gRPC APIs using Python (FastAPI/Django) or Go.",
+    "Model relational database schemas and optimize query execution plans in PostgreSQL.",
+    "Implement asynchronous task workers and distributed caching using Redis and Celery/RabbitMQ.",
+    "Write thorough unit, integration, and load tests to safeguard service reliability."
+  ],
+  "required_skills": [
+    "Solid understanding of Python or Go and object-oriented / modular software design.",
+    "Hands-on experience with SQL databases (PostgreSQL/MySQL), relational schema design, and queries.",
+    "Understanding of REST API design principles, HTTP protocols, and status codes.",
+    "Foundational knowledge of data structures, algorithms, and computational complexity (Big-O)."
+  ],
+  "preferred_skills": [
+    "Experience with async Python (FastAPI/AsyncIO) or Go goroutines/channels.",
+    "Familiarity with Redis caching patterns, pub/sub, or message brokers.",
+    "Basic knowledge of Docker containerization and CI/CD pipelines."
+  ],
+  "cultural_competencies": [
+    "Strong ownership and attention to edge cases and data integrity.",
+    "Comfort working in a collaborative team with regular code reviews.",
+    "Proactive problem solver who asks good questions early."
+  ]
+}

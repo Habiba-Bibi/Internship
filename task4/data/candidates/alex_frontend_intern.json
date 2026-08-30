@@ -1,0 +1,75 @@
+{
+  "id": "cand_alex_frontend",
+  "name": "Alex Chen",
+  "email": "alex.chen@university.edu",
+  "target_role": "Frontend Engineering Intern",
+  "education": {
+    "institution": "State University",
+    "degree": "B.S. Computer Science",
+    "graduation_year": 2027,
+    "gpa": 3.78,
+    "relevant_coursework": [
+      "Data Structures & Algorithms",
+      "Web Architecture & Systems",
+      "Human-Computer Interaction",
+      "Database Management Systems",
+      "Software Engineering Methods"
+    ]
+  },
+  "skills": {
+    "languages": ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3/Sass", "Python"],
+    "frameworks": ["React", "Next.js", "TailwindCSS", "Redux Toolkit", "Node.js (Basic)"],
+    "tools": ["Git/GitHub", "Vite", "Webpack", "Figma", "Jest", "React Testing Library", "Chrome DevTools"]
+  },
+  "skill_levels": {
+    "JavaScript": "Advanced",
+    "React": "Intermediate",
+    "TypeScript": "Intermediate",
+    "CSS/HTML": "Advanced",
+    "Next.js": "Beginner",
+    "Testing (Jest)": "Intermediate",
+    "State Management": "Intermediate"
+  },
+  "projects": [
+    {
+      "title": "StudySync - Collaborative Real-Time Study Room",
+      "role": "Lead Frontend Developer",
+      "description": "Built a responsive web application allowing university students to join live virtual study rooms with integrated Pomodoro timers, shared markdown notes, and WebRTC audio chat. Implemented responsive UI with React and TailwindCSS, managing real-time room state via Socket.io client.",
+      "technologies": ["React", "TypeScript", "TailwindCSS", "Socket.io", "Zustand"],
+      "github_url": "https://github.com/alexchen/studysync",
+      "live_demo": "https://studysync-demo.vercel.app",
+      "highlights": [
+        "Reduced initial bundle load time by 38% using dynamic code splitting and lazy loading of modals.",
+        "Created an accessible design system with 100% WCAG 2.1 AA keyboard navigation compliance."
+      ]
+    },
+    {
+      "title": "CampusEats - University Food Delivery Tracker",
+      "role": "Full-Stack Project Lead (Hackathon 2nd Place)",
+      "description": "Developed an interactive web map tracking food trucks and campus dining hall crowds. Designed dynamic filterable UI with real-time ETA updates and mobile-first responsive layout.",
+      "technologies": ["React", "JavaScript", "Leaflet Maps API", "CSS Grid", "Firebase"],
+      "github_url": "https://github.com/alexchen/campuseats",
+      "highlights": [
+        "Implemented custom debounce hook for search queries to prevent excess map re-renders.",
+        "Built in 36 hours during HackState 2025."
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Undergraduate Teaching Assistant - Intro to Web Development",
+      "organization": "Department of Computer Science",
+      "period": "Aug 2025 - Present",
+      "description": "Mentored 80+ students on modern JavaScript, HTML/CSS layouts, and React basics. Conducted weekly code review lab sessions and created automated grading test suites."
+    }
+  ],
+  "strengths": [
+    "Strong eye for responsive UI/UX and accessibility",
+    "High proficiency in modern React and component architecture",
+    "Eager communicator with teaching experience"
+  ],
+  "growth_areas": [
+    "Limited production experience with complex backend microservices",
+    "Early stage with Next.js Server Components and SSR optimization"
+  ]
+}

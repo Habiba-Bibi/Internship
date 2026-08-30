@@ -1,0 +1,617 @@
+[
+  {
+    "id": "TECH-FE-001",
+    "category": "Technical",
+    "domain": "Frontend Development",
+    "skills": ["JavaScript", "DOM", "Async/Await", "Event Loop"],
+    "difficulty": "Foundational",
+    "question": "Can you explain the JavaScript Event Loop and how asynchronous operations like setTimeout, Promises, and async/await are processed?",
+    "context": "Assesses foundational understanding of JavaScript execution model, call stack, microtask queue, and macrotask queue.",
+    "expected_key_points": [
+      "Call stack executes synchronous code first.",
+      "Web APIs handle background tasks like timers and network requests.",
+      "Microtasks (Promises, process.nextTick) have higher priority than macrotasks (setTimeout, setInterval).",
+      "Event loop continuously checks if call stack is empty before pushing the next task from the queue."
+    ],
+    "follow_up_probes": [
+      "What is the output order of: console.log(1); setTimeout(() => console.log(2), 0); Promise.resolve().then(() => console.log(3)); console.log(4)?",
+      "How does async/await syntax map to Promises under the hood?"
+    ],
+    "rubric": {
+      "poor": "Confuses synchronous and asynchronous execution, cannot differentiate setTimeout from Promises.",
+      "good": "Correctly identifies call stack, task queues, and explains microtask priority over setTimeout.",
+      "excellent": "Provides clear mental model with exact execution order walkthrough and explains browser rendering/repaint queue integration."
+    },
+    "time_allocation_mins": 5
+  },
+  {
+    "id": "TECH-FE-002",
+    "category": "Technical",
+    "domain": "Frontend Development",
+    "skills": ["React", "State Management", "Hooks", "Component Lifecycle"],
+    "difficulty": "Standard Intern",
+    "question": "In React, what are the primary differences between useState and useReducer, and how do you prevent unnecessary re-renders of child components?",
+    "context": "Evaluates practical React knowledge, state management decisions, and performance optimization instincts.",
+    "expected_key_points": [
+      "useState is best for simple, independent state variables.",
+      "useReducer is ideal for complex state transitions, interdependent state, or actions resembling Redux.",
+      "Preventing re-renders: React.memo for pure components, useCallback for memoizing callback functions, useMemo for expensive calculations.",
+      "State lifting vs context/global stores."
+    ],
+    "follow_up_probes": [
+      "Why might passing an inline arrow function as a prop cause React.memo to fail?",
+      "When is useMemo premature optimization vs genuinely necessary?"
+    ],
+    "rubric": {
+      "poor": "Cannot explain when to choose useReducer or how React determines when to re-render.",
+      "good": "Clearly explains useState vs useReducer and gives 2+ ways to optimize component rendering.",
+      "excellent": "Demonstrates deep understanding of reference equality in props, dependency arrays in hooks, and component reconciliation."
+    },
+    "time_allocation_mins": 5
+  },
+  {
+    "id": "TECH-FE-003",
+    "category": "Technical",
+    "domain": "Frontend Development",
+    "skills": ["CSS", "Responsive Design", "Flexbox", "Grid"],
+    "difficulty": "Foundational",
+    "question": "When designing a responsive layout, how do you decide between using CSS Flexbox vs CSS Grid, and how do media queries fit in?",
+    "context": "Tests modern CSS styling fundamentals and responsiveness principles for web applications.",
+    "expected_key_points": [
+      "Flexbox is one-dimensional (row OR column), ideal for alignment, navigation bars, and flexible item sizing.",
+      "CSS Grid is two-dimensional (rows AND columns simultaneously), ideal for overall page layout and matrix cards.",
+      "Media queries adapt breakpoints based on viewport width/height and device characteristics (mobile-first design)."
+    ],
+    "follow_up_probes": [
+      "What is the difference between min-width and max-width breakpoints?",
+      "How do CSS custom properties (variables) help maintain a consistent design system across themes?"
+    ],
+    "rubric": {
+      "poor": "Cannot distinguish 1D vs 2D layout mechanisms, relies solely on manual absolute positioning or float hacks.",
+      "good": "Explains Flexbox vs Grid correctly with realistic UI examples and mentions mobile-first strategy.",
+      "excellent": "Discusses container queries, subgrid, fluid typography with clamp(), and accessible responsive design."
+    },
+    "time_allocation_mins": 4
+  },
+  {
+    "id": "TECH-FE-004",
+    "category": "Technical",
+    "domain": "Frontend Development",
+    "skills": ["TypeScript", "Type Safety", "Generics", "Interfaces"],
+    "difficulty": "Standard Intern",
+    "question": "What advantages does TypeScript provide over plain JavaScript in a collaborative project, and what is the difference between an `interface` and a `type` alias?",
+    "context": "Evaluates candidate's experience with static typing and software maintainability.",
+    "expected_key_points": [
+      "Compile-time error catching, auto-completion/IntelliSense, self-documenting code, safer refactoring.",
+      "Interfaces can be merged (declaration merging) and extended via `extends`.",
+      "Type aliases support union types, intersection types, tuples, and primitive aliases.",
+      "Both can describe object shapes."
+    ],
+    "follow_up_probes": [
+      "How do generics work in TypeScript functions or React components?",
+      "Why is using `unknown` safer than using `any`?"
+    ],
+    "rubric": {
+      "poor": "Thinks TypeScript is just a syntax filter with no compile-time benefits, unable to explain `any` vs typed data.",
+      "good": "Explains IDE benefits, interfaces vs types, and union types with clear syntax understanding.",
+      "excellent": "Demonstrates usage of generics, utility types (Partial, Pick, Omit), and runtime validation boundaries."
+    },
+    "time_allocation_mins": 5
+  },
+  {
+    "id": "TECH-FE-005",
+    "category": "Technical",
+    "domain": "Frontend Development",
+    "skills": ["Web Performance", "Core Web Vitals", "Lighthouse", "Assets"],
+    "difficulty": "Advanced Intern",
+    "question": "If a web page is loading slowly on a mobile network, what steps would you take to diagnose and optimize its performance?",
+    "context": "Tests debugging instincts, browser devtools familiarity, and modern web performance best practices.",
+    "expected_key_points": [
+      "Diagnosis: Chrome DevTools (Network tab, Performance tab, Lighthouse, Core Web Vitals like LCP, FID/INP, CLS).",
+      "Asset optimization: Image compression (WebP/AVIF), lazy loading, font subsetting.",
+      "Code splitting: Dynamic imports (`import()`), route-based chunking, tree shaking.",
+      "Caching: HTTP caching headers, Service Workers, CDN distribution."
+    ],
+    "follow_up_probes": [
+      "What causes Cumulative Layout Shift (CLS) and how do you fix it?",
+      "What is the difference between `defer` and `async` script loading attributes?"
+    ],
+    "rubric": {
+      "poor": "Only suggests restarting the server or deleting files, no awareness of devtools or asset bundling.",
+      "good": "Mentions DevTools network analysis, image compression, code splitting, and browser caching.",
+      "excellent": "Structures an end-to-end audit methodology referencing Core Web Vitals, critical rendering path, and bundle analysis."
+    },
+    "time_allocation_mins": 6
+  },
+  {
+    "id": "TECH-BE-001",
+    "category": "Technical",
+    "domain": "Backend & APIs",
+    "skills": ["REST API", "HTTP", "Status Codes", "API Design"],
+    "difficulty": "Foundational",
+    "question": "What principles define a RESTful API, and how do you decide which HTTP status codes to return for different scenarios (e.g., 200, 201, 400, 401, 403, 404, 500)?",
+    "context": "Assesses foundational understanding of web protocols and clean API contract design.",
+    "expected_key_points": [
+      "Statelessness, resource-oriented URIs using nouns (e.g., /api/users, not /api/getUsers).",
+      "Standard HTTP verbs: GET (read), POST (create), PUT/PATCH (update), DELETE (remove).",
+      "Status code distinctions: 200 OK vs 201 Created; 400 Bad Request (syntax/validation); 401 Unauthorized (unauthenticated) vs 403 Forbidden (authenticated but lacking permissions); 404 Not Found; 500 Server Error."
+    ],
+    "follow_up_probes": [
+      "What is the difference between PUT and PATCH for updates?",
+      "What does idempotency mean, and which HTTP methods are idempotent?"
+    ],
+    "rubric": {
+      "poor": "Always returns 200 with an error object inside, or confuses 401 and 403.",
+      "good": "Explains noun-based endpoints, CRUD verbs, and accurate status code selection.",
+      "excellent": "Discusses idempotency, pagination standards, versioning strategies, and RFC error response formats."
+    },
+    "time_allocation_mins": 5
+  },
+  {
+    "id": "TECH-BE-002",
+    "category": "Technical",
+    "domain": "Backend & APIs",
+    "skills": ["Python", "AsyncIO", "FastAPI", "Concurrency"],
+    "difficulty": "Standard Intern",
+    "question": "In Python or FastAPI, how does asynchronous programming (`async`/`await`) differ from traditional multi-threading or synchronous execution, and when should you use each?",
+    "context": "Tests backend concurrency knowledge, non-blocking I/O vs CPU-bound tasks, and framework architecture.",
+    "expected_key_points": [
+      "AsyncIO uses a single-threaded cooperative event loop, ideal for I/O-bound tasks (database queries, external API calls).",
+      "Multithreading in standard Python is constrained by the GIL (Global Interpreter Lock) for CPU tasks.",
+      "Multiprocessing or Celery/background workers are needed for heavy CPU-bound computational workloads.",
+      "FastAPI uses ASGI (Uvicorn/Starlette) to handle concurrent async requests efficiently."
+    ],
+    "follow_up_probes": [
+      "What happens if you run a blocking synchronous operation (like `time.sleep` or heavy math) inside an `async def` route in FastAPI?",
+      "How do connection pools work in async database drivers?"
+    ],
+    "rubric": {
+      "poor": "Believes `async` creates a new OS thread for each call or confuses CPU vs I/O bound problems.",
+      "good": "Explains non-blocking I/O event loop and warns against blocking the main thread.",
+      "excellent": "Deep understanding of event loop mechanics, threadpools for sync workers, GIL impact, and async context managers."
+    },
+    "time_allocation_mins": 5
+  },
+  {
+    "id": "TECH-BE-003",
+    "category": "Technical",
+    "domain": "Databases & Storage",
+    "skills": ["SQL", "PostgreSQL", "Database Indexing", "Query Optimization"],
+    "difficulty": "Standard Intern",
+    "question": "How does a database index work under the hood (e.g., B-Tree), and what are the trade-offs of adding too many indexes to a table?",
+    "context": "Evaluates database literacy, search optimization, and awareness of write penalties.",
+    "expected_key_points": [
+      "Indexes act like an organized lookup table (typically B-Tree or Hash) pointing directly to data pages.",
+      "Dramatic speedup for SELECT queries with WHERE, JOIN, or ORDER BY conditions on indexed columns.",
+      "Trade-offs: Slower write operations (INSERT, UPDATE, DELETE) because every index must be updated; increased disk storage usage."
+    ],
+    "follow_up_probes": [
+      "How would you use `EXPLAIN ANALYZE` to determine if a query is doing a sequential scan vs index scan?",
+      "What is a composite index and why does column order matter in it?"
+    ],
+    "rubric": {
+      "poor": "Cannot explain how an index speeds up lookups or believes indexes have no downsides.",
+      "good": "Explains B-Tree lookup vs table scan and identifies write penalty and disk overhead.",
+      "excellent": "Analyzes composite index leftmost prefix rule, index selectivity, and query execution plans."
+    },
+    "time_allocation_mins": 5
+  },
+  {
+    "id": "TECH-BE-004",
+    "category": "Technical",
+    "domain": "Backend & Security",
+    "skills": ["Authentication", "JWT", "OAuth2", "Security"],
+    "difficulty": "Standard Intern",
+    "question": "Can you explain how JWT (JSON Web Token) authentication works, what is inside its three parts, and how you securely store and transmit tokens?",
+    "context": "Assesses security hygiene, token lifecycle, and authentication architecture.",
+    "expected_key_points": [
+      "Structure: Header (algorithm), Payload (claims/user data), Signature (HMAC/RSA hash with secret key).",
+      "Stateless validation: Server verifies signature without querying session DB every request.",
+      "Storage & security: HttpOnly Secure cookies to prevent XSS theft, short expiration times with refresh token rotation.",
+      "Do NOT store sensitive data (like passwords) in payload as it is only base64 encoded, not encrypted."
+    ],
+    "follow_up_probes": [
+      "What is the risk of storing tokens in browser localStorage?",
+      "How do you revoke a JWT before its expiration if a user logs out or gets compromised?"
+    ],
+    "rubric": {
+      "poor": "Thinks base64 encoding is encryption, or cannot explain how the server verifies token validity.",
+      "good": "Explains Header.Payload.Signature, signature verification, and HttpOnly cookie security.",
+      "excellent": "Discusses token revocation blocklists, Redis session sync, refresh token rotation, and CSRF vs XSS mitigations."
+    },
+    "time_allocation_mins": 6
+  },
+  {
+    "id": "TECH-BE-005",
+    "category": "Technical",
+    "domain": "Databases & Storage",
+    "skills": ["SQL vs NoSQL", "Data Modeling", "MongoDB", "PostgreSQL"],
+    "difficulty": "Foundational",
+    "question": "How do you choose between a relational SQL database (like PostgreSQL) and a NoSQL document store (like MongoDB) for a new project?",
+    "context": "Tests architectural decision-making and data modeling fundamentals.",
+    "expected_key_points": [
+      "SQL: Structured schema, ACID transactions, complex relational joins, data integrity, mature tooling.",
+      "NoSQL: Flexible/dynamic schema, hierarchical document structures, horizontal scalability, rapid prototyping with evolving schemas.",
+      "Selection criteria: Consistency requirements, relational complexity, read/write patterns, scalability needs."
+    ],
+    "follow_up_probes": [
+      "Can modern PostgreSQL store and query JSON documents efficiently?",
+      "What is the CAP theorem and how does it relate to distributed databases?"
+    ],
+    "rubric": {
+      "poor": "Gives buzzword answers like 'SQL is slow, NoSQL is fast' without technical grounding.",
+      "good": "Explains schema rigidity vs flexibility, ACID compliance, and relational joins.",
+      "excellent": "Demonstrates nuanced comparison of query patterns, transactional guarantees, and JSONB in modern RDBMS."
+    },
+    "time_allocation_mins": 5
+  },
+  {
+    "id": "TECH-ML-001",
+    "category": "Technical",
+    "domain": "Data Science & Machine Learning",
+    "skills": ["Machine Learning", "Overfitting", "Cross-Validation", "Regularization"],
+    "difficulty": "Foundational",
+    "question": "What is overfitting in machine learning, how do you detect it during training, and what techniques do you use to prevent it?",
+    "context": "Evaluates foundational ML concepts, model diagnostics, and regularization methods.",
+    "expected_key_points": [
+      "Overfitting occurs when a model learns noise/details of training data instead of generalizing to unseen data.",
+      "Detection: High training accuracy / low training loss but low validation accuracy / high validation loss.",
+      "Remedies: More data, data augmentation, K-fold cross-validation, regularization (L1 Lasso, L2 Ridge, Dropout), pruning/early stopping, simplifying model architecture."
+    ],
+    "follow_up_probes": [
+      "What is the difference between L1 (Lasso) and L2 (Ridge) regularization mathematically and practically?",
+      "Why is data leakage dangerous and how do you prevent it during preprocessing?"
+    ],
+    "rubric": {
+      "poor": "Cannot explain training vs validation divergence or conflates underfitting with overfitting.",
+      "good": "Identifies train/val loss divergence and provides 3+ viable prevention techniques (regularization, dropout, early stopping).",
+      "excellent": "Explains bias-variance tradeoff, sparsity effects of L1, and best practices for avoiding leakage in feature pipelines."
+    },
+    "time_allocation_mins": 5
+  },
+  {
+    "id": "TECH-ML-002",
+    "category": "Technical",
+    "domain": "Data Science & Machine Learning",
+    "skills": ["Evaluation Metrics", "Classification", "Precision", "Recall", "ROC-AUC"],
+    "difficulty": "Standard Intern",
+    "question": "In an imbalanced classification problem (e.g., fraud detection where only 0.1% of transactions are fraudulent), why is Accuracy a misleading metric, and what metrics should you use instead?",
+    "context": "Tests practical evaluation judgment on real-world datasets.",
+    "expected_key_points": [
+      "A trivial model predicting 'not fraud' 100% of the time achieves 99.9% accuracy while finding zero fraud cases.",
+      "Better metrics: Precision (True Positives / Total Predicted Positives), Recall / Sensitivity (True Positives / Actual Positives), F1-Score / PR-AUC, ROC-AUC.",
+      "Trade-off: Cost of False Positives (flagging legitimate user) vs False Negatives (missing fraud)."
+    ],
+    "follow_up_probes": [
+      "When would you prioritize High Recall over High Precision?",
+      "How do techniques like SMOTE, class weighting, or focal loss address class imbalance?"
+    ],
+    "rubric": {
+      "poor": "Insists accuracy is sufficient or confuses precision with recall.",
+      "good": "Explains precision/recall/F1 and why high accuracy masks majority class bias.",
+      "excellent": "Discusses PR curves vs ROC curves for extreme imbalance, cost-matrix optimization, and resampling strategies."
+    },
+    "time_allocation_mins": 5
+  },
+  {
+    "id": "TECH-ML-003",
+    "category": "Technical",
+    "domain": "Data Science & Machine Learning",
+    "skills": ["NLP", "Transformers", "LLMs", "Embeddings", "RAG"],
+    "difficulty": "Standard Intern",
+    "question": "Can you explain how Vector Embeddings work in modern NLP/LLM applications, and how Retrieval-Augmented Generation (RAG) uses them?",
+    "context": "Tests modern AI/LLM application knowledge and semantic search concepts.",
+    "expected_key_points": [
+      "Embeddings convert text into dense high-dimensional vectors where semantic similarity corresponds to vector proximity (cosine similarity).",
+      "RAG Pipeline: 1. Chunk documents, 2. Embed chunks into vector database (e.g., Chroma, FAISS, Pinecone), 3. At query time, embed prompt, 4. Retrieve top-k nearest chunks, 5. Inject retrieved context into LLM prompt.",
+      "Benefits: Overcomes LLM knowledge cutoffs, reduces hallucination, accesses proprietary private data."
+    ],
+    "follow_up_probes": [
+      "What chunking strategies would you consider and why does chunk size matter?",
+      "How do you evaluate whether a RAG system is retrieving relevant documents?"
+    ],
+    "rubric": {
+      "poor": "Cannot explain embeddings beyond 'numbers' or doesn't know what RAG stands for.",
+      "good": "Explains vector distance/similarity search and steps of RAG context injection.",
+      "excellent": "Discusses chunking trade-offs, re-ranking models (Cross-Encoders), embedding dimensions, and hallucination reduction metrics."
+    },
+    "time_allocation_mins": 6
+  },
+  {
+    "id": "TECH-DO-001",
+    "category": "Technical",
+    "domain": "DevOps & Cloud",
+    "skills": ["Docker", "Containers", "Virtual Machines", "Deployment"],
+    "difficulty": "Foundational",
+    "question": "What is the core difference between a Docker container and a traditional Virtual Machine, and why are containers widely adopted for application deployments?",
+    "context": "Assesses containerization principles, virtualization, and reproducibility.",
+    "expected_key_points": [
+      "VMs virtualize hardware and run a full guest OS on top of a hypervisor (heavy resource overhead, slower startup).",
+      "Containers share the host OS kernel and isolate user space using Linux cgroups and namespaces (lightweight, megabytes in size, instant boot).",
+      "Benefits: Consistency across environments ('works on my machine' solved), high density, fast CI/CD builds, portable images."
+    ],
+    "follow_up_probes": [
+      "What is the difference between a Docker image and a running container?",
+      "How do multi-stage Docker builds optimize image size and security?"
+    ],
+    "rubric": {
+      "poor": "Thinks containers are just small VMs with their own complete kernel.",
+      "good": "Explains shared OS kernel vs hypervisor and lists container benefits for CI/CD.",
+      "excellent": "Details namespaces, cgroups, layered filesystem (UnionFS), and security isolation boundaries."
+    },
+    "time_allocation_mins": 5
+  },
+  {
+    "id": "TECH-DO-002",
+    "category": "Technical",
+    "domain": "DevOps & Cloud",
+    "skills": ["CI/CD", "GitHub Actions", "Automated Testing", "Pipeline"],
+    "difficulty": "Standard Intern",
+    "question": "What are the essential stages of a Continuous Integration & Continuous Deployment (CI/CD) pipeline for a web application, and how do you prevent broken code from reaching production?",
+    "context": "Evaluates software delivery lifecycle understanding, automated testing, and release gating.",
+    "expected_key_points": [
+      "Stages: 1. Code Linting & Static Analysis, 2. Automated Unit/Integration Testing, 3. Build & Container Packaging, 4. Security Scanning (dependencies/vulnerabilities), 5. Staging Deployment & E2E Verification, 6. Production Release.",
+      "Gating mechanisms: Branch protection rules, required passing CI checks, manual approval gates, canary / blue-green deployments, automated rollbacks."
+    ],
+    "follow_up_probes": [
+      "How does Blue-Green deployment achieve zero-downtime releases?",
+      "How do you manage secret keys and environment variables in CI/CD runners securely?"
+    ],
+    "rubric": {
+      "poor": "Believes CI/CD is just copying files via FTP or has never seen automated test stages.",
+      "good": "Walks through linting, testing, building, and deployment gates in order.",
+      "excellent": "Demonstrates experience with GitHub Actions workflow YAMLs, artifact caching, secret masking, and rollback strategies."
+    },
+    "time_allocation_mins": 5
+  },
+  {
+    "id": "TECH-DSA-001",
+    "category": "Technical",
+    "domain": "Data Structures & Algorithms",
+    "skills": ["Data Structures", "Hash Maps", "Time Complexity", "Big-O"],
+    "difficulty": "Foundational",
+    "question": "How does a Hash Map achieve average O(1) time complexity for lookups, and what happens in worst-case scenarios when hash collisions occur?",
+    "context": "Evaluates fundamental computer science data structure mechanics and complexity analysis.",
+    "expected_key_points": [
+      "Hash function maps key to an integer index in an underlying array bucket.",
+      "Collisions occur when two distinct keys hash to the same bucket index.",
+      "Collision resolution techniques: Separate Chaining (linked lists or balanced trees in buckets) or Open Addressing (linear probing, quadratic probing).",
+      "Worst-case O(n) if all keys collide into a single chain, which triggers dynamic resizing / rehashing when load factor threshold is exceeded."
+    ],
+    "follow_up_probes": [
+      "What makes a good hash function?",
+      "Why did Java 8 switch HashMap buckets from linked lists to Red-Black Trees when bucket size exceeds 8?"
+    ],
+    "rubric": {
+      "poor": "Doesn't understand what hashing is or assumes hash tables never have collisions.",
+      "good": "Explains hash function indexing, collision chaining, and load factor resizing.",
+      "excellent": "Analyzes amortized O(1) vs worst-case O(n), balanced tree collision buckets, and cryptographic vs non-cryptographic hashes."
+    },
+    "time_allocation_mins": 5
+  },
+  {
+    "id": "TECH-DSA-002",
+    "category": "Technical",
+    "domain": "Data Structures & Algorithms",
+    "skills": ["Algorithms", "Binary Search", "Trees", "Sorting"],
+    "difficulty": "Standard Intern",
+    "question": "Explain how Binary Search works, what prerequisite must be met to apply it, and how the same logarithmic concept applies to Binary Search Trees (BST)?",
+    "context": "Tests divide-and-conquer reasoning and basic tree structures.",
+    "expected_key_points": [
+      "Prerequisite: The input array/sequence must be sorted.",
+      "Mechanism: Repeatedly halves the search space by comparing target with midpoint. O(log n) time complexity.",
+      "BST: Left subtree holds values < root, right subtree holds values > root. Average search is O(log n), but degrades to O(n) if unbalanced (skewed tree). Balanced trees (AVL, Red-Black) guarantee O(log n)."
+    ],
+    "follow_up_probes": [
+      "How do you prevent integer overflow when calculating midpoint `(low + high) / 2` in languages with fixed integer sizes?",
+      "Can binary search be applied to find answers on a monotonic function space (binary search on answer)?"
+    ],
+    "rubric": {
+      "poor": "Cannot state prerequisite of sorted data or confuses linear search with binary search.",
+      "good": "Accurately describes divide-and-conquer steps, O(log n) complexity, and BST structure.",
+      "excellent": "Identifies midpoint overflow `low + (high - low) / 2`, analyzes unbalanced tree degeneration, and self-balancing mechanisms."
+    },
+    "time_allocation_mins": 5
+  },
+  {
+    "id": "BEHAV-TEAM-001",
+    "category": "Behavioral",
+    "domain": "Teamwork & Collaboration",
+    "skills": ["Collaboration", "Communication", "Cross-Functional", "STAR"],
+    "difficulty": "Foundational",
+    "question": "Describe a situation in a university course, hackathon, or previous internship where you had to collaborate closely with team members who had different working styles or technical backgrounds. How did you coordinate and deliver the project?",
+    "context": "Assesses interpersonal adaptability, proactive communication, and ability to thrive in collaborative team environments.",
+    "expected_key_points": [
+      "Situation: Clear context of team size, diverse backgrounds, and project goal.",
+      "Task: Individual role and team objective.",
+      "Action: Established clear communication channels (Slack/Discord, GitHub project board), split work according to strengths, held regular syncs, pair programmed on bottlenecks.",
+      "Result: Successful delivery on schedule, positive team dynamic, and key learnings."
+    ],
+    "follow_up_probes": [
+      "If someone on the team was falling behind on their deliverables, how did you support them?",
+      "What would you do differently if you ran that project again today?"
+    ],
+    "rubric": {
+      "poor": "Blames teammates, complains about group work, or claims they did 100% of the work alone with pride.",
+      "good": "Uses structured STAR approach, shows empathy and proactive coordination.",
+      "excellent": "Demonstrates leadership without authority, inclusive delegation, constructive technical alignment, and thoughtful reflection."
+    },
+    "time_allocation_mins": 5
+  },
+  {
+    "id": "BEHAV-AMBIG-001",
+    "category": "Behavioral",
+    "domain": "Handling Ambiguity & Problem Solving",
+    "skills": ["Ambiguity", "Initiative", "Research", "STAR"],
+    "difficulty": "Standard Intern",
+    "question": "Tell me about a time when you were assigned an open-ended programming task or academic assignment with vague requirements. How did you determine what to build and make progress?",
+    "context": "Tests self-direction, scoping ability, requirement discovery, and bias for action.",
+    "expected_key_points": [
+      "Situation: Project with minimal guidance or ambiguous problem statement.",
+      "Task: Need to deliver a functional solution without getting paralyzed by uncertainty.",
+      "Action: Broke problem into smaller testable milestones, researched existing solutions/libraries, created mockups/prototypes, asked clarifying questions to professors/mentors, documented assumptions.",
+      "Result: Delivered MVP meeting core goals, validated assumptions, gained confidence in independent discovery."
+    ],
+    "follow_up_probes": [
+      "How did you know when to stop researching and start writing code?",
+      "How did you validate your assumptions before building too much?"
+    ],
+    "rubric": {
+      "poor": "Stalled completely, waited for someone to do the thinking for them, or built something irrelevant without asking questions.",
+      "good": "Demonstrates structured breakdown of ambiguous goals, proactive questioning, and iterative prototyping.",
+      "excellent": "Shows high agency, defines clear minimum viable scope, creates decision matrices, and communicates proactively."
+    },
+    "time_allocation_mins": 5
+  },
+  {
+    "id": "BEHAV-LEARN-001",
+    "category": "Behavioral",
+    "domain": "Learning Agility & Adaptability",
+    "skills": ["Continuous Learning", "Adaptability", "Fast Learning", "STAR"],
+    "difficulty": "Foundational",
+    "question": "Can you share an example of a new programming language, framework, or tool that you had to learn quickly for a project? What was your learning strategy and how long did it take you to become productive?",
+    "context": "Evaluates learning velocity, self-teaching methods, and comfort with unfamiliar technologies.",
+    "expected_key_points": [
+      "Situation: Project requirement necessitating unfamiliar technology (e.g., learning React, Docker, or PyTorch in a few days/weeks).",
+      "Task: Rapid ramp-up to contribute effectively without delaying project timeline.",
+      "Action: Official documentation first, building minimal toy examples, reading open-source codebases, debugging systematically, taking structured notes.",
+      "Result: Successfully implemented feature/system, gained lasting fluency, shared learnings with peers."
+    ],
+    "follow_up_probes": [
+      "When you encountered cryptic error messages in the new tool, how did you debug them?",
+      "What is your philosophy on reading official documentation vs following video tutorials?"
+    ],
+    "rubric": {
+      "poor": "Relies exclusively on copy-pasting code without understanding underlying concepts, shows frustration with new tools.",
+      "good": "Articulates a structured learning strategy (docs + toy projects + debugging) and achieves productivity.",
+      "excellent": "Synthesizes mental models by connecting new concepts to known paradigms, reads source code or specs, and creates onboarding notes."
+    },
+    "time_allocation_mins": 5
+  },
+  {
+    "id": "BEHAV-DEBUG-001",
+    "category": "Behavioral",
+    "domain": "Debugging & Resilience",
+    "skills": ["Debugging", "Problem Solving", "Resilience", "Root Cause Analysis"],
+    "difficulty": "Standard Intern",
+    "question": "Tell me about the most challenging bug or technical roadblock you encountered in one of your projects. Walk me through how you isolated the root cause and fixed it.",
+    "context": "Evaluates technical problem-solving methodology, scientific hypothesis testing, persistence, and root-cause analysis.",
+    "expected_key_points": [
+      "Situation: Elusive bug (e.g., race condition, memory leak, state synchronization issue, subtle API mismatch).",
+      "Task: Resolve the issue without introducing side-effects.",
+      "Action: Systematic isolation: Reproduce bug consistently, binary search in code/git bisect, inspect logs and debugger variables, formulate hypotheses and test them one by one, write regression test.",
+      "Result: Bug resolved permanently, prevented future occurrences, learned deeper architectural nuance."
+    ],
+    "follow_up_probes": [
+      "What assumptions did you have at the beginning that turned out to be wrong?",
+      "Did you add any automated tests or assertions to ensure the bug never returns?"
+    ],
+    "rubric": {
+      "poor": "Describes random trial-and-error changes ('I kept changing random lines until it worked') without understanding why.",
+      "good": "Demonstrates scientific debugging (hypothesis -> logging/breakpoints -> test -> fix).",
+      "excellent": "Shows rigorous root-cause analysis, uses advanced profiling/debugging tools, writes regression tests, and documents preventative measures."
+    },
+    "time_allocation_mins": 6
+  },
+  {
+    "id": "BEHAV-FEED-001",
+    "category": "Behavioral",
+    "domain": "Feedback & Growth Mindset",
+    "skills": ["Feedback", "Growth Mindset", "Code Review", "Mentorship"],
+    "difficulty": "Foundational",
+    "question": "Can you tell me about a time you received constructive criticism or critical code review feedback on your work? How did you respond emotionally and technically?",
+    "context": "Tests coachability, receptiveness to critique, lack of ego, and continuous personal development.",
+    "expected_key_points": [
+      "Situation: Peer, TA, professor, or senior engineer pointed out flaws, anti-patterns, or requested significant refactoring.",
+      "Task: Process the feedback objectively and improve the solution.",
+      "Action: Separated self-worth from code, asked clarifying questions to understand the 'why' behind best practices, implemented improvements promptly, thanked reviewer.",
+      "Result: Improved code quality, strengthened relationship with reviewer, internalized the lesson for future work."
+    ],
+    "follow_up_probes": [
+      "Have you ever disagreed with review feedback, and how did you navigate that discussion respectfully?",
+      "How do you approach giving feedback to others on their code?"
+    ],
+    "rubric": {
+      "poor": "Defensive, dismissive of review comments, or takes criticism as a personal attack.",
+      "good": "Welcomes feedback gracefully, asks clarifying questions, and applies changes diligently.",
+      "excellent": "Demonstrates genuine enthusiasm for mentorship, seeks feedback proactively, and explains respectful technical debate strategies."
+    },
+    "time_allocation_mins": 5
+  },
+  {
+    "id": "SCEN-LIVE-001",
+    "category": "Situational / Scenario",
+    "domain": "Software Engineering Scenarios",
+    "skills": ["Code Quality", "Refactoring", "System Thinking", "Trade-offs"],
+    "difficulty": "Standard Intern",
+    "question": "Imagine you join our team and are asked to add a new feature to an existing 1,000-line legacy module with no unit tests and minimal documentation. How would you approach your first week working on this task?",
+    "context": "Tests real-world engineering pragmatism, caution with legacy systems, and safety-first development practices.",
+    "expected_key_points": [
+      "Do not blindly rewrite or start editing immediately.",
+      "First: Trace execution flow, read tests/call sites across codebase, reproduce working baseline locally.",
+      "Second: Write characterization/golden-master tests around current behavior to establish a safety net.",
+      "Third: Clarify edge cases with team lead or mentor.",
+      "Fourth: Implement the feature incrementally with unit tests; small atomic commits."
+    ],
+    "follow_up_probes": [
+      "If you notice obvious code smells or security flaws while reading the module, what would you do?",
+      "How do you balance refactoring vs shipping the requested feature on time?"
+    ],
+    "rubric": {
+      "poor": "Suggests deleting the file to rewrite from scratch without tests, or making massive unverified changes.",
+      "good": "Emphasizes understanding existing behavior first, writing tests before refactoring, and asking team for context.",
+      "excellent": "Outlines characterization testing, Boy Scout rule (leave code slightly cleaner), risk assessment, and incremental PR strategy."
+    },
+    "time_allocation_mins": 6
+  },
+  {
+    "id": "SCEN-LIVE-002",
+    "category": "Situational / Scenario",
+    "domain": "Software Engineering Scenarios",
+    "skills": ["Deadlines", "Communication", "Prioritization", "Project Management"],
+    "difficulty": "Foundational",
+    "question": "You committed to completing an assigned internship milestone by Friday afternoon, but on Thursday morning you realize unexpected technical blockers will cause a 2-day delay. What actions do you take immediately?",
+    "context": "Assesses professional responsibility, proactive communication, escalation etiquette, and expectation management.",
+    "expected_key_points": [
+      "Communicate immediately on Thursday morning (do NOT wait until Friday afternoon to drop a surprise).",
+      "Prepare a concise status update: What was accomplished, the specific blocker encountered, and revised estimate.",
+      "Propose actionable options: (A) Deliver core MVP by Friday and follow up with stretch goals on Monday, or (B) Request pairing session with senior engineer to unblock.",
+      "Ask manager/mentor for priority guidance."
+    ],
+    "follow_up_probes": [
+      "How do you prevent similar estimation surprises in future sprints?",
+      "What is the difference between working harder in secret vs asking for help early?"
+    ],
+    "rubric": {
+      "poor": "Hides the delay until Friday 5 PM, panics, or burns out pulling all-nighters without notifying the team.",
+      "good": "Communicates early on Thursday with clear blocker details and proposed workarounds.",
+      "excellent": "Demonstrates mature stakeholder communication, comes with solutions rather than just problems, and shows continuous estimation improvement."
+    },
+    "time_allocation_mins": 5
+  },
+  {
+    "id": "DEEP-PROJ-001",
+    "category": "Resume Deep Dive",
+    "domain": "Project Architecture & Ownership",
+    "skills": ["System Design", "Architecture", "Decision Making", "Ownership"],
+    "difficulty": "Standard Intern",
+    "question": "In your featured portfolio project listed on your resume, what was the most difficult architectural decision you made, what alternatives did you reject, and what would you design differently today?",
+    "context": "Validates hands-on project authenticity, independent technical reasoning, and trade-off evaluation.",
+    "expected_key_points": [
+      "Clear explanation of project objective and architectural components.",
+      "Identification of specific decision (e.g., choice of database, state management library, authentication strategy, caching layer).",
+      "Analysis of rejected alternatives with concrete trade-offs (e.g., why SQL over MongoDB, or why REST over GraphQL for this use case).",
+      "Self-reflective critique on limitations and scaling bottlenecks."
+    ],
+    "follow_up_probes": [
+      "If user traffic increased 100x overnight, what component of your architecture would fail first?",
+      "How much of the codebase was built with boilerplate/templates vs custom logic written by you?"
+    ],
+    "rubric": {
+      "poor": "Gives surface-level answers ('I chose React because it is popular'), cannot explain architectural trade-offs, or reveals lack of actual project contribution.",
+      "good": "Clearly explains architecture, specific trade-offs considered, and personal contributions.",
+      "excellent": "Deep technical grasp of failure modes, performance bottlenecks, production considerations, and articulate retrospection."
+    },
+    "time_allocation_mins": 6
+  }
+]

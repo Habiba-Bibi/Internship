@@ -1,0 +1,33 @@
+{
+  "id": "job_frontend_intern",
+  "title": "Frontend Engineering Intern (Summer 2026)",
+  "department": "Core Product Engineering",
+  "level": "Internship / Co-op",
+  "duration": "12 Weeks (Full-time)",
+  "location": "San Francisco, CA / Hybrid / Remote Friendly",
+  "company_overview": "We build fast, collaborative cloud workspace tools used by millions of developers and teams worldwide. Our engineering culture values clean code, delightful UX, rapid feedback loops, and empathetic mentorship.",
+  "responsibilities": [
+    "Collaborate with product designers and backend engineers to build responsive, accessible web interfaces in React and TypeScript.",
+    "Optimize client-side performance, reduce bundle sizes, and improve Core Web Vitals across desktop and mobile browsers.",
+    "Write comprehensive unit and integration tests using Jest and React Testing Library.",
+    "Participate in daily standups, sprint planning, and bi-weekly engineering demo days.",
+    "Deliver an end-to-end user-facing feature project by the end of the 12-week program."
+  ],
+  "required_skills": [
+    "Proficiency in JavaScript (ES6+) and modern frontend web standards (HTML5/CSS3).",
+    "Hands-on experience building web apps with React (Hooks, state management, component lifecycles).",
+    "Understanding of responsive layout design (Flexbox, CSS Grid) and cross-browser quirks.",
+    "Familiarity with Git version control and collaborative pull request workflows."
+  ],
+  "preferred_skills": [
+    "Experience with TypeScript in React applications.",
+    "Familiarity with Next.js, TailwindCSS, or modern UI component libraries.",
+    "Basic knowledge of web accessibility standards (WCAG 2.1).",
+    "Exposure to automated testing with Jest or Cypress."
+  ],
+  "cultural_competencies": [
+    "Curiosity and eagerness to learn unfamiliar web technologies quickly.",
+    "Ability to communicate technical decisions clearly and collaborate in cross-functional teams.",
+    "Growth mindset when receiving and incorporating constructive code review feedback."
+  ]
+}

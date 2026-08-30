@@ -1,0 +1,32 @@
+{
+  "id": "job_devops_intern",
+  "title": "Cloud Infrastructure & DevOps Intern",
+  "department": "Platform Reliability & Infrastructure",
+  "level": "Internship / Co-op",
+  "duration": "12 Weeks",
+  "location": "Boston, MA / Remote Friendly",
+  "company_overview": "We engineer robust cloud platforms, automated deployment pipelines, and global infrastructure that keep our multi-tenant SaaS services running 24/7/365.",
+  "responsibilities": [
+    "Write and maintain Infrastructure as Code (IaC) templates in Terraform for AWS/GCP cloud environments.",
+    "Build and improve automated CI/CD pipelines using GitHub Actions and Docker.",
+    "Configure monitoring alerts, log aggregation, and Grafana observability dashboards.",
+    "Assist senior SREs with incident response postmortems and chaos engineering experiments."
+  ],
+  "required_skills": [
+    "Familiarity with Linux operating system fundamentals, shell scripting (Bash), and system commands.",
+    "Foundational understanding of networking protocols (TCP/IP, DNS, HTTP/HTTPS, VPC subnets).",
+    "Experience building and running Docker containers.",
+    "Basic knowledge of version control (Git) and automated testing principles."
+  ],
+  "preferred_skills": [
+    "Experience with Terraform (IaC) or Ansible.",
+    "Exposure to Kubernetes (k8s) pod management and Helm charts.",
+    "Familiarity with Prometheus, Grafana, or Datadog monitoring tools.",
+    "Basic Python or Go automation scripting."
+  ],
+  "cultural_competencies": [
+    "Methodical approach to safety, change control, and failure prevention.",
+    "Curiosity for distributed systems and resilience engineering.",
+    "Calm demeanor and systematic troubleshooting under pressure."
+  ]
+}

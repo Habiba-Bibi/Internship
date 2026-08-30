@@ -1,0 +1,73 @@
+{
+  "id": "cand_emily_fullstack",
+  "name": "Emily Zhang",
+  "email": "emily.zhang@globaluni.edu",
+  "target_role": "Full-Stack Software Engineering Intern",
+  "education": {
+    "institution": "Global University",
+    "degree": "B.S. in Software Engineering",
+    "graduation_year": 2026,
+    "gpa": 3.81,
+    "relevant_coursework": [
+      "Full-Stack Web Architectures",
+      "Database Systems",
+      "Object-Oriented Design & Patterns",
+      "Cloud Application Development",
+      "Computer Security"
+    ]
+  },
+  "skills": {
+    "languages": ["TypeScript", "JavaScript", "Python", "Java", "SQL"],
+    "frameworks": ["React", "Next.js", "Node.js", "Express", "TailwindCSS", "Spring Boot (Basic)"],
+    "tools": ["PostgreSQL", "Prisma ORM", "Docker", "AWS (S3, Lambda)", "Git", "GitHub Actions", "Vercel"]
+  },
+  "skill_levels": {
+    "React / Next.js": "Advanced",
+    "TypeScript": "Advanced",
+    "Node.js / Express": "Intermediate",
+    "PostgreSQL & Prisma": "Intermediate",
+    "Cloud / AWS": "Beginner",
+    "Git & CI/CD": "Intermediate"
+  },
+  "projects": [
+    {
+      "title": "DevBoard - Developer Project Collaboration Hub",
+      "role": "Solo Full-Stack Developer",
+      "description": "Created a full-stack SaaS platform connecting open-source contributors with project maintainers. Features dynamic kanban boards, live chat, markdown documentation editor, and GitHub OAuth integration.",
+      "technologies": ["Next.js (App Router)", "TypeScript", "Prisma", "PostgreSQL", "TailwindCSS", "NextAuth.js"],
+      "github_url": "https://github.com/emilyzhang/devboard",
+      "live_demo": "https://devboard-app.vercel.app",
+      "highlights": [
+        "Implemented Server Actions and optimistic UI updates for seamless drag-and-drop kanban experience.",
+        "Integrated AWS S3 pre-signed URLs for secure direct image uploads."
+      ]
+    },
+    {
+      "title": "EcoTrack - Personal Carbon Footprint Tracker",
+      "role": "Full-Stack Engineer (Senior Capstone)",
+      "description": "Built mobile-friendly web application with interactive charts and automated receipt text extraction using Tesseract OCR and Node backend.",
+      "technologies": ["React", "Node.js", "Express", "Chart.js", "PostgreSQL", "Docker"],
+      "github_url": "https://github.com/emilyzhang/ecotrack",
+      "highlights": [
+        "Architected role-based access control (RBAC) and JWT authentication with refresh token rotation."
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Web Developer Fellow",
+      "organization": "University Innovation Hub",
+      "period": "Jan 2025 - Present",
+      "description": "Maintained and added features to internal student portal serving 5,000 active monthly users. Migrated legacy JavaScript codebase to TypeScript."
+    }
+  ],
+  "strengths": [
+    "End-to-end full stack development velocity and pragmatic problem solving",
+    "Strong TypeScript discipline across frontend and backend",
+    "Great product sense and user-centered design thinking"
+  ],
+  "growth_areas": [
+    "Deep low-level systems performance profiling and complex database sharding",
+    "Advanced Kubernetes infrastructure management"
+  ]
+}

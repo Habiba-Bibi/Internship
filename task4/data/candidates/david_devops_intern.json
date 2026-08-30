@@ -1,0 +1,74 @@
+{
+  "id": "cand_david_devops",
+  "name": "David Morales",
+  "email": "d.morales@engr-univ.edu",
+  "target_role": "Cloud Infrastructure & DevOps Intern",
+  "education": {
+    "institution": "State Engineering University",
+    "degree": "B.S. in Information Systems & Computer Networks",
+    "graduation_year": 2027,
+    "gpa": 3.72,
+    "relevant_coursework": [
+      "Cloud Computing & Virtualization",
+      "Network Security & Protocols",
+      "Linux System Administration",
+      "Site Reliability Engineering",
+      "Database Systems"
+    ]
+  },
+  "skills": {
+    "languages": ["Bash / Shell", "Python", "Go (Basic)", "YAML", "HCL (Terraform)"],
+    "frameworks": ["FastAPI (Basic)", "Flask"],
+    "tools": ["Docker", "Kubernetes (k8s)", "Terraform", "GitHub Actions", "Prometheus", "Grafana", "AWS (EC2, S3, IAM, VPC)", "Linux (Ubuntu/Debian)"]
+  },
+  "skill_levels": {
+    "Linux & Bash": "Advanced",
+    "Docker": "Advanced",
+    "Terraform": "Intermediate",
+    "Kubernetes": "Intermediate",
+    "CI/CD Pipelines": "Advanced",
+    "Cloud (AWS)": "Intermediate",
+    "Monitoring (Prometheus)": "Intermediate"
+  },
+  "projects": [
+    {
+      "title": "CloudLab - Automated Multi-Tier AWS Infrastructure via Terraform",
+      "role": "Cloud Architect / Solo Dev",
+      "description": "Defined reproducible cloud infrastructure provisioning multi-AZ VPC, Auto-Scaling EC2 web tiers behind Application Load Balancers, and RDS multi-AZ databases using modular Terraform code. Automated state locking with S3 and DynamoDB.",
+      "technologies": ["Terraform", "AWS", "Bash", "GitHub Actions", "Docker"],
+      "github_url": "https://github.com/davidmorales/cloudlab-infra",
+      "highlights": [
+        "Implemented zero-trust security group isolation and least-privilege IAM policies.",
+        "Built automated pull-request validation with `terraform fmt`, `tflint`, and `checkov` security scanners."
+      ]
+    },
+    {
+      "title": "KubeMetrics - Microservices Observability Stack",
+      "role": "DevOps Engineer",
+      "description": "Deployed local Kubernetes (k3s/Minikube) cluster running sample microservices instrumented with Prometheus metric exporters and pre-configured Grafana alert dashboards.",
+      "technologies": ["Kubernetes", "Docker", "Prometheus", "Grafana", "Helm", "Python"],
+      "github_url": "https://github.com/davidmorales/kubemetrics",
+      "highlights": [
+        "Created custom Helm charts for unified multi-environment deployment (dev/staging).",
+        "Set up Slack webhook alerting triggers for CPU spikes and container crashloops."
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Student Systems Administrator",
+      "organization": "University Computer Labs",
+      "period": "Sep 2024 - Present",
+      "description": "Managed fleet of 45 Linux workstations. Wrote automated Bash and Ansible configuration scripts for remote patch management and user account provisioning."
+    }
+  ],
+  "strengths": [
+    "Practical hands-on automation, scripting, and containerization skills",
+    "Strong security awareness (least privilege IAM, credential management)",
+    "Passionate about observability, metrics, and site reliability"
+  ],
+  "growth_areas": [
+    "Frontend development and complex JavaScript web stacks",
+    "Advanced algorithmic graph theory and low-level C compilation"
+  ]
+}

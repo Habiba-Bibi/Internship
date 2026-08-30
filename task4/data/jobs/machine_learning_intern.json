@@ -1,0 +1,31 @@
+{
+  "id": "job_ml_intern",
+  "title": "Machine Learning & AI Research Intern",
+  "department": "Applied AI Research",
+  "level": "Internship / Graduate Co-op",
+  "duration": "12-16 Weeks",
+  "location": "New York, NY / Remote Friendly",
+  "company_overview": "Our Applied AI team invents and scales state-of-the-art foundation models and intelligent agent systems for enterprise knowledge workers.",
+  "responsibilities": [
+    "Design, train, and evaluate deep learning architectures and LLM prompt/fine-tuning pipelines.",
+    "Benchmark retrieval algorithms and vector indexing techniques on large multi-modal datasets.",
+    "Implement data processing scripts, ablation studies, and qualitative evaluation suites in PyTorch.",
+    "Collaborate with research scientists to publish findings and integrate prototypes into product pipelines."
+  ],
+  "required_skills": [
+    "Strong proficiency in Python and modern ML libraries (PyTorch, NumPy, Pandas, scikit-learn).",
+    "Solid theoretical foundation in neural networks, gradient optimization, transformers, and evaluation metrics.",
+    "Experience preprocessing unstructured text or vision datasets and preventing data leakage.",
+    "Ability to read and reproduce research papers independently."
+  ],
+  "preferred_skills": [
+    "Experience with Hugging Face Transformers, LoRA, and LLM fine-tuning.",
+    "Familiarity with Vector Databases (Chroma, FAISS, Pinecone) and RAG architectures.",
+    "Exposure to model quantization, ONNX/TensorRT optimization, or Docker containerization."
+  ],
+  "cultural_competencies": [
+    "Scientific integrity and rigorous experimental benchmarking.",
+    "Persistence when diagnosing model training anomalies and divergence.",
+    "Clear communication of complex mathematical and algorithmic ideas."
+  ]
+}

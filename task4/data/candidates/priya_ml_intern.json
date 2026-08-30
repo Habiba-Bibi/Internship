@@ -1,0 +1,72 @@
+{
+  "id": "cand_priya_ml",
+  "name": "Priya Patel",
+  "email": "priya.patel@tech-institute.edu",
+  "target_role": "Machine Learning Research Intern",
+  "education": {
+    "institution": "Institute of Technology",
+    "degree": "M.S. in Artificial Intelligence & Data Science",
+    "graduation_year": 2026,
+    "gpa": 3.92,
+    "relevant_coursework": [
+      "Deep Learning & Neural Networks",
+      "Natural Language Processing",
+      "Statistical Machine Learning",
+      "Computer Vision",
+      "Reinforcement Learning"
+    ]
+  },
+  "skills": {
+    "languages": ["Python", "C++", "SQL", "R"],
+    "frameworks": ["PyTorch", "Hugging Face Transformers", "scikit-learn", "FastAPI", "NumPy", "Pandas"],
+    "tools": ["Git/GitHub", "Weights & Biases (Wandb)", "ChromaDB", "Docker", "Linux / Bash", "Jupyter"]
+  },
+  "skill_levels": {
+    "Python": "Advanced",
+    "PyTorch": "Advanced",
+    "Hugging Face": "Intermediate",
+    "Data Preprocessing": "Advanced",
+    "RAG & Vector DBs": "Intermediate",
+    "Model Deployment": "Beginner"
+  },
+  "projects": [
+    {
+      "title": "BioMed-RAG: Clinical Literature QA System",
+      "role": "Lead ML Researcher",
+      "description": "Engineered a Retrieval-Augmented Generation pipeline parsing 15,000+ medical open-access papers. Benchmarked semantic search using dense embeddings (BioBERT) vs sparse BM25 retrieval, generating evidence-backed clinical summaries with LLaMA-3 fine-tuned with LoRA.",
+      "technologies": ["Python", "PyTorch", "Hugging Face", "ChromaDB", "LangChain", "FastAPI"],
+      "github_url": "https://github.com/priyapatel/biomed-rag",
+      "highlights": [
+        "Achieved 87.4% ROUGE-L score on clinical QA benchmark, outperforming vanilla retrieval baseline by 22%.",
+        "Applied LoRA 4-bit quantization to run model inference within 8GB VRAM limits."
+      ]
+    },
+    {
+      "title": "Autonomous Drone Obstacle Avoidance using YOLOv8",
+      "role": "Computer Vision Engineer (Undergrad Capstone)",
+      "description": "Trained real-time object detection models on synthetic and flight camera feeds to detect wires, trees, and obstacles at 45 FPS on edge NVIDIA Jetson.",
+      "technologies": ["Python", "PyTorch", "YOLOv8", "OpenCV", "TensorRT"],
+      "github_url": "https://github.com/priyapatel/drone-vision",
+      "highlights": [
+        "Quantized model with INT8 TensorRT, achieving 3.2x latency reduction on edge hardware."
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Graduate Graduate Research Assistant",
+      "organization": "AI Systems Laboratory",
+      "period": "Sep 2025 - Present",
+      "description": "Researched cross-lingual semantic representation transfer under Prof. Henderson. Published a workshop paper at EMNLP 2025."
+    }
+  ],
+  "strengths": [
+    "Deep theoretical and mathematical foundation in deep learning and Transformers",
+    "Hands-on experience fine-tuning LLMs and building RAG pipelines",
+    "Publication track record and empirical evaluation rigor"
+  ],
+  "growth_areas": [
+    "Production software engineering practices (Kubernetes, high-throughput cloud streaming)",
+    "Frontend development and user dashboard creation"
+  ]
+}

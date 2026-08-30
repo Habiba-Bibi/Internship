@@ -1,0 +1,73 @@
+{
+  "id": "cand_marcus_backend",
+  "name": "Marcus Vance",
+  "email": "m.vance@polytechnic.edu",
+  "target_role": "Backend Engineering Intern",
+  "education": {
+    "institution": "City Polytechnic University",
+    "degree": "B.S. in Computer Science & Applied Mathematics",
+    "graduation_year": 2027,
+    "gpa": 3.84,
+    "relevant_coursework": [
+      "Operating Systems & Concurrency",
+      "Distributed Systems Principles",
+      "Database Systems Internals",
+      "Computer Networks",
+      "Algorithms & Complexity"
+    ]
+  },
+  "skills": {
+    "languages": ["Python", "Go (Golang)", "SQL", "C", "Bash"],
+    "frameworks": ["FastAPI", "Django", "Gin (Go)", "SQLAlchemy", "Celery"],
+    "tools": ["PostgreSQL", "Redis", "Docker", "RabbitMQ", "Git", "Postman", "Linux", "Pytest"]
+  },
+  "skill_levels": {
+    "Python": "Advanced",
+    "Go": "Intermediate",
+    "SQL / PostgreSQL": "Advanced",
+    "FastAPI": "Advanced",
+    "Redis / Caching": "Intermediate",
+    "Docker": "Intermediate"
+  },
+  "projects": [
+    {
+      "title": "HyperQueue - Distributed Task Scheduling Broker",
+      "role": "Solo Creator",
+      "description": "Architected a high-throughput job queue and task scheduler in Go and Redis with worker heartbeat monitoring, exponential backoff retries, and dead-letter queue management. Implemented REST and WebSocket monitoring dashboard.",
+      "technologies": ["Go", "Redis", "PostgreSQL", "Docker", "WebSockets"],
+      "github_url": "https://github.com/marcusvance/hyperqueue",
+      "highlights": [
+        "Benchmark tested at 12,000 tasks/second with sub-15ms acknowledgement latency under simulated packet loss.",
+        "Engineered distributed locking using Redis Redlock algorithm to prevent duplicate worker executions."
+      ]
+    },
+    {
+      "title": "Campus Marketplace API with Microservices",
+      "role": "Backend Lead",
+      "description": "Built async microservice backend with FastAPI, PostgreSQL, and RabbitMQ message broker for item listings, messaging, and Stripe payment webhook integrations.",
+      "technologies": ["FastAPI", "PostgreSQL", "RabbitMQ", "SQLAlchemy", "Alembic", "Docker Compose"],
+      "github_url": "https://github.com/marcusvance/campus-api",
+      "highlights": [
+        "Wrote 95% code coverage test suite using Pytest and Testcontainers.",
+        "Optimized slow multi-table joins using composite database indexes and Redis read caching, reducing P99 latency by 64%."
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Software Engineering Intern (Summer 2025)",
+      "organization": "FinTech Startup Labs",
+      "period": "Jun 2025 - Aug 2025",
+      "description": "Built transaction audit log endpoints in FastAPI. Reduced database query latency by creating database indexes and connection pooling in SQLAlchemy."
+    }
+  ],
+  "strengths": [
+    "Deep understanding of concurrency, async I/O, and distributed messaging",
+    "Strong database design, indexing strategies, and SQL optimization",
+    "Obsession with automated testing, CI, and clean API design"
+  ],
+  "growth_areas": [
+    "Frontend frameworks (React/Vue/CSS layout) are minimal",
+    "Kubernetes cluster administration and multi-region failover"
+  ]
+}

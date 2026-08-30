@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InternAI - Custom Technical & Behavioral Interview Question Generator</title>
+    <meta name="description" content="Automated, role-specific technical and behavioral interview question generator tailored for intern candidates using LLMs, skill gap analysis, and curated question banks.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Top Navbar -->
+        <header class="navbar">
+            <div class="nav-brand">
+                <div class="brand-icon">
+                    <i data-lucide="sparkles"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>Intern<span>AI</span></h1>
+                    <span class="badge-sub">Interview Intelligence</span>
+                </div>
+            </div>
+
+            <!-- Navigation Tabs -->
+            <nav class="nav-tabs" id="navTabs">
+                <button class="nav-tab active" data-tab="studio-tab">
+                    <i data-lucide="cpu"></i> Generator Studio
+                </button>
+                <button class="nav-tab" data-tab="kit-tab" id="kitTabBtn">
+                    <i data-lucide="clipboard-list"></i> Interview Kit <span class="tab-badge" id="kitCountBadge">0</span>
+                </button>
+                <button class="nav-tab" data-tab="bank-tab">
+                    <i data-lucide="book-open"></i> Question Bank
+                </button>
+                <button class="nav-tab" data-tab="profiles-tab">
+                    <i data-lucide="users"></i> Profiles & Jobs
+                </button>
+                <button class="nav-tab" data-tab="simulator-tab">
+                    <i data-lucide="play-circle"></i> Live Simulator
+                </button>
+                <button class="nav-tab" data-tab="settings-tab">
+                    <i data-lucide="settings"></i> AI Config
+                </button>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="btn-theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+                    <i data-lucide="sun" id="themeIcon"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- TAB 1: GENERATOR STUDIO -->
+            <section class="tab-pane active" id="studio-tab">
+                <div class="studio-grid">
+                    <!-- Left Column: Input Selection -->
+                    <div class="studio-card input-card">
+                        <div class="card-header">
+                            <div class="header-title">
+                                <i data-lucide="file-text"></i>
+                                <h2>1. Target Intern & Job Alignment</h2>
+                            </div>
+                            <span class="pill-info">Auto-Matching Active</span>
+                        </div>
+
+                        <!-- Candidate Selection -->
+                        <div class="form-group">
+                            <div class="label-row">
+                                <label for="candidateSelect"><i data-lucide="user"></i> Intern Candidate Profile</label>
+                                <button class="btn-text-action" id="customCandBtn">+ Custom Resume</button>
+                            </div>
+                            <select id="candidateSelect" class="form-select">
+                                <option value="">Loading candidate profiles...</option>
+                            </select>
+                        </div>
+
+                        <!-- Job Selection -->
+                        <div class="form-group">
+                            <div class="label-row">
+                                <label for="jobSelect"><i data-lucide="briefcase"></i> Job Description & Level</label>
+                                <button class="btn-text-action" id="customJobBtn">+ Custom Job</button>
+                            </div>
+                            <select id="jobSelect" class="form-select">
+                                <option value="">Loading job descriptions...</option>
+                            </select>
+                        </div>
+
+                        <!-- Dynamic Skill Match Radar & Gap Card -->
+                        <div class="skill-gap-preview" id="skillGapPreview">
+                            <div class="match-score-row">
+                                <div class="score-circle-wrapper">
+                                    <div class="score-circle" id="scoreCircle">
+                                        <span id="matchScoreVal">--%</span>
+                                    </div>
+                                </div>
+                                <div class="score-text-details">
+                                    <h4 id="matchScoreTitle">Profile Alignment</h4>
+                                    <p id="matchScoreSubtitle">Select a candidate and job to preview skill alignment and coverage.</p>
+                                </div>
+                            </div>
+
+                            <div class="skill-tags-group">
+                                <div class="skill-tag-section">
+                                    <span class="tag-title text-success"><i data-lucide="check-circle-2"></i> Matched Core Skills:</span>
+                                    <div class="tags-container" id="matchedSkillsTags">
+                                        <span class="tag-empty">Select profiles to analyze</span>
+                                    </div>
+                                </div>
+                                <div class="skill-tag-section">
+                                    <span class="tag-title text-warning"><i data-lucide="alert-circle"></i> Identified Gaps / Probing Areas:</span>
+                                    <div class="tags-container" id="missingSkillsTags">
+                                        <span class="tag-empty">None detected</span>
+                                    </div>
+                                </div>
+                                <div class="skill-tag-section">
+                                    <span class="tag-title text-accent"><i data-lucide="star"></i> Candidate Unique Strengths:</span>
+                                    <div class="tags-container" id="bonusSkillsTags">
+                                        <span class="tag-empty">None</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Generation Controls -->
+                    <div class="studio-card config-card">
+                        <div class="card-header">
+                            <div class="header-title">
+                                <i data-lucide="sliders"></i>
+                                <h2>2. Interview Kit Composition</h2>
+                            </div>
+                            <span class="pill-info">STAR & Technical Framework</span>
+                        </div>
+
+                        <div class="sliders-grid">
+                            <div class="slider-item">
+                                <div class="slider-header">
+                                    <span class="slider-name"><i data-lucide="layers"></i> Resume & Project Deep-Dive</span>
+                                    <span class="slider-val" id="valDeepDive">2</span>
+                                </div>
+                                <input type="range" id="numDeepDive" min="0" max="4" value="2" class="range-slider">
+                                <span class="slider-desc">Probes actual projects, architectural decisions, and genuine personal ownership.</span>
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="slider-header">
+                                    <span class="slider-name"><i data-lucide="code-2"></i> Technical Questions</span>
+                                    <span class="slider-val" id="valTechnical">4</span>
+                                </div>
+                                <input type="range" id="numTechnical" min="1" max="8" value="4" class="range-slider">
+                                <span class="slider-desc">Calibrated for CS fundamentals, tech stack overlap, and practical trade-offs.</span>
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="slider-header">
+                                    <span class="slider-name"><i data-lucide="message-square"></i> Behavioral (STAR Method)</span>
+                                    <span class="slider-val" id="valBehavioral">3</span>
+                                </div>
+                                <input type="range" id="numBehavioral" min="1" max="6" value="3" class="range-slider">
+                                <span class="slider-desc">College & intern scenarios: teamwork, ambiguity, fast learning, and feedback.</span>
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="slider-header">
+                                    <span class="slider-name"><i data-lucide="shield-alert"></i> Practical Engineering Scenario</span>
+                                    <span class="slider-val" id="valScenario">1</span>
+                                </div>
+                                <input type="range" id="numScenario" min="0" max="3" value="1" class="range-slider">
+                                <span class="slider-desc">Simulated production incidents, deadline crunch, and legacy code navigation.</span>
+                            </div>
+                        </div>
+
+                        <div class="config-row-2col">
+                            <div class="form-group">
+                                <label for="difficultySelect"><i data-lucide="gauge"></i> Target Difficulty Level</label>
+                                <select id="difficultySelect" class="form-select">
+                                    <option value="Standard Intern" selected>Standard Intern (Balanced)</option>
+                                    <option value="Foundational">Foundational (1st/2nd Year)</option>
+                                    <option value="Advanced Intern">Advanced Intern (High Bar)</option>
+                                    <option value="Mixed">Mixed (Graduated Progression)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="llmProviderSelect"><i data-lucide="bot"></i> AI Generation Engine</label>
+                                <select id="llmProviderSelect" class="form-select">
+                                    <option value="mock" selected>⚡ Local Heuristic AI Engine (Instant Offline)</option>
+                                    <option value="openai">OpenAI GPT-4o / GPT-3.5</option>
+                                    <option value="llama">Local Ollama / LLaMA-3</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="studio-cta">
+                            <button id="generateKitBtn" class="btn-primary-large">
+                                <i data-lucide="sparkles"></i>
+                                <span>Generate Role-Specific Interview Kit</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 2: ACTIVE INTERVIEW KIT & SCORECARD -->
+            <section class="tab-pane" id="kit-tab">
+                <div class="kit-container">
+                    <!-- Kit Top Header -->
+                    <div class="kit-header-card" id="kitHeaderCard">
+                        <div class="kit-main-info">
+                            <div class="kit-badge-row">
+                                <span class="badge-role" id="kitRoleBadge">Select Candidate & Generate</span>
+                                <span class="badge-time" id="kitTimeBadge"><i data-lucide="clock"></i> 45 Mins Total</span>
+                                <span class="badge-match" id="kitMatchBadge"><i data-lucide="check-check"></i> 90% Skill Fit</span>
+                            </div>
+                            <h2 class="kit-candidate-name" id="kitCandidateName">No Active Interview Kit</h2>
+                            <p class="kit-meta-desc" id="kitMetaDesc">Generate an interview kit from the Studio tab to view calibrated questions, rubric scoring sheets, and follow-up probes.</p>
+                        </div>
+
+                        <div class="kit-header-actions">
+                            <div class="export-dropdown">
+                                <button class="btn-secondary" id="exportMenuBtn">
+                                    <i data-lucide="download"></i> Export Kit <i data-lucide="chevron-down"></i>
+                                </button>
+                                <div class="dropdown-content" id="exportDropdown">
+                                    <button data-format="markdown"><i data-lucide="file-text"></i> Markdown Guide (.md)</button>
+                                    <button data-format="html"><i data-lucide="printer"></i> Printable HTML / PDF</button>
+                                    <button data-format="json"><i data-lucide="code"></i> Structured JSON (.json)</button>
+                                </div>
+                            </div>
+                            <button class="btn-primary" id="launchSimulatorBtn">
+                                <i data-lucide="play"></i> Live Interview Mode
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Interview Kit Sections & Questions -->
+                    <div class="kit-content-layout">
+                        <!-- Left: Sections Accordion & Question Cards -->
+                        <div class="kit-questions-list" id="kitQuestionsList">
+                            <div class="empty-state">
+                                <i data-lucide="file-question"></i>
+                                <h3>No Interview Questions Generated Yet</h3>
+                                <p>Head over to the <strong>Generator Studio</strong> tab, choose an intern profile and job description, and click <strong>Generate Kit</strong>.</p>
+                            </div>
+                        </div>
+
+                        <!-- Right: Live Scorecard & Decision Sidebar -->
+                        <aside class="scorecard-sidebar" id="scorecardSidebar">
+                            <div class="scorecard-card sticky-card">
+                                <div class="scorecard-header">
+                                    <div class="header-icon"><i data-lucide="award"></i></div>
+                                    <div>
+                                        <h3>Live Interview Scorecard</h3>
+                                        <span class="sub-text">Real-time candidate evaluation</span>
+                                    </div>
+                                </div>
+
+                                <div class="score-summary-box">
+                                    <div class="score-num" id="liveAvgScore">0.0</div>
+                                    <div class="score-stars" id="liveScoreStars">☆☆☆☆☆</div>
+                                    <div class="recommendation-badge badge-neutral" id="liveRecBadge">Undecided</div>
+                                </div>
+
+                                <div class="scorecard-breakdown">
+                                    <h4>Section Progress</h4>
+                                    <div class="progress-bar-bg">
+                                        <div class="progress-bar-fill" id="scorecardProgress" style="width: 0%;"></div>
+                                    </div>
+                                    <div class="progress-stats">
+                                        <span id="evaluatedCount">0 / 0 Questions Rated</span>
+                                    </div>
+                                </div>
+
+                                <div class="scorecard-notes-field">
+                                    <label for="overallNotes"><i data-lucide="edit-3"></i> Final Interviewer Feedback</label>
+                                    <textarea id="overallNotes" rows="4" placeholder="Enter overall impressions, technical highlights, and key concerns..."></textarea>
+                                </div>
+
+                                <button class="btn-success-block" id="finalizeScorecardBtn">
+                                    <i data-lucide="check-circle"></i> Finalize Hiring Recommendation
+                                </button>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 3: QUESTION BANK EXPLORER -->
+            <section class="tab-pane" id="bank-tab">
+                <div class="bank-layout">
+                    <!-- Filters Header -->
+                    <div class="bank-filter-bar">
+                        <div class="search-input-wrapper">
+                            <i data-lucide="search"></i>
+                            <input type="text" id="bankSearchInput" placeholder="Search 150+ questions by keyword, skill (e.g. React, SQL, Docker, STAR)...">
+                        </div>
+
+                        <div class="filter-controls">
+                            <select id="bankCategoryFilter" class="filter-select">
+                                <option value="all">All Categories</option>
+                                <option value="Technical">Technical</option>
+                                <option value="Behavioral">Behavioral (STAR)</option>
+                                <option value="Situational / Scenario">Scenario</option>
+                                <option value="Resume Deep Dive">Resume Deep Dive</option>
+                            </select>
+
+                            <select id="bankDifficultyFilter" class="filter-select">
+                                <option value="all">All Difficulties</option>
+                                <option value="Foundational">Foundational</option>
+                                <option value="Standard Intern">Standard Intern</option>
+                                <option value="Advanced Intern">Advanced Intern</option>
+                            </select>
+
+                            <button class="btn-secondary" id="addNewQuestionBtn">
+                                <i data-lucide="plus"></i> Add Question
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Question Grid -->
+                    <div class="bank-grid" id="bankQuestionsGrid">
+                        <!-- Dynamically populated -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 4: PROFILES & JOBS MANAGER -->
+            <section class="tab-pane" id="profiles-tab">
+                <div class="profiles-jobs-grid">
+                    <!-- Candidates Column -->
+                    <div class="manager-column">
+                        <div class="column-header">
+                            <div class="title-with-icon">
+                                <i data-lucide="users"></i>
+                                <h3>Intern Candidate Profiles</h3>
+                            </div>
+                            <button class="btn-sm-primary" id="addCandModalBtn">+ New Profile</button>
+                        </div>
+                        <div class="cards-list" id="candidatesCardsList">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Job Descriptions Column -->
+                    <div class="manager-column">
+                        <div class="column-header">
+                            <div class="title-with-icon">
+                                <i data-lucide="briefcase"></i>
+                                <h3>Intern Job Descriptions</h3>
+                            </div>
+                            <button class="btn-sm-primary" id="addJobModalBtn">+ New Job</button>
+                        </div>
+                        <div class="cards-list" id="jobsCardsList">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 5: LIVE MOCK INTERVIEW SIMULATOR -->
+            <section class="tab-pane" id="simulator-tab">
+                <div class="simulator-wrapper" id="simulatorWrapper">
+                    <div class="sim-top-bar">
+                        <div class="sim-candidate-info">
+                            <span class="sim-role" id="simRoleLabel">Role: Frontend Intern</span>
+                            <h2 class="sim-name" id="simCandidateName">Candidate Interview in Progress</h2>
+                        </div>
+
+                        <!-- Timer Widget -->
+                        <div class="timer-widget">
+                            <div class="timer-display">
+                                <i data-lucide="timer"></i>
+                                <span id="timerDisplay">05:00</span>
+                            </div>
+                            <div class="timer-controls">
+                                <button class="btn-icon" id="timerStartBtn" title="Start/Pause Timer"><i data-lucide="play" id="timerPlayIcon"></i></button>
+                                <button class="btn-icon" id="timerResetBtn" title="Reset Timer"><i data-lucide="rotate-ccw"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="sim-actions">
+                            <button class="btn-secondary btn-sm" id="exitSimBtn">Exit Simulator</button>
+                        </div>
+                    </div>
+
+                    <!-- Simulator Question Stage -->
+                    <div class="sim-stage">
+                        <div class="sim-question-box">
+                            <div class="sim-q-meta">
+                                <span class="badge-category" id="simCategoryBadge">Technical</span>
+                                <span class="badge-diff" id="simDiffBadge">Standard Intern</span>
+                                <span class="badge-index" id="simIndexBadge">Question 1 of 6</span>
+                            </div>
+                            <h3 class="sim-q-text" id="simQuestionText">Please generate an interview kit first to start the simulator.</h3>
+                            
+                            <div class="sim-rubric-card">
+                                <h4>Expected Key Criteria & Rubric:</h4>
+                                <ul id="simKeyPointsList">
+                                    <li>Generate a kit to view key criteria.</li>
+                                </ul>
+                            </div>
+
+                            <div class="sim-probes-card">
+                                <h4>Follow-up Probes:</h4>
+                                <ul id="simProbesList">
+                                    <li>Probing questions will appear here.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Live Notepad & Score Input -->
+                        <div class="sim-notes-panel">
+                            <div class="sim-score-selector">
+                                <label>Score for this Question:</label>
+                                <div class="score-buttons" id="simScoreButtons">
+                                    <button class="score-btn" data-score="1">1 (Poor)</button>
+                                    <button class="score-btn" data-score="2">2 (Marginal)</button>
+                                    <button class="score-btn" data-score="3">3 (Good)</button>
+                                    <button class="score-btn" data-score="4">4 (Strong)</button>
+                                    <button class="score-btn" data-score="5">5 (Exceptional)</button>
+                                </div>
+                            </div>
+
+                            <div class="sim-scratchpad">
+                                <label for="simNotes"><i data-lucide="pen-tool"></i> Interviewer Scratchpad Notes:</label>
+                                <textarea id="simNotes" placeholder="Type quick notes during candidate's response..."></textarea>
+                            </div>
+
+                            <div class="sim-nav-buttons">
+                                <button class="btn-secondary" id="simPrevBtn"><i data-lucide="chevron-left"></i> Previous</button>
+                                <button class="btn-primary" id="simNextBtn">Next Question <i data-lucide="chevron-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 6: AI ENGINE & SETTINGS -->
+            <section class="tab-pane" id="settings-tab">
+                <div class="settings-card">
+                    <div class="card-header">
+                        <div class="header-title">
+                            <i data-lucide="cpu"></i>
+                            <h2>AI Model Configuration & Connectors</h2>
+                        </div>
+                        <span class="pill-info">Multi-Model Support</span>
+                    </div>
+
+                    <div class="settings-form">
+                        <div class="form-group">
+                            <label for="settingsProvider">Active LLM Provider</label>
+                            <select id="settingsProvider" class="form-select">
+                                <option value="mock">⚡ Built-in Heuristic AI Engine (Offline & Fast)</option>
+                                <option value="openai">OpenAI (GPT-4o, GPT-3.5-Turbo)</option>
+                                <option value="llama">Ollama / LLaMA 3 (Local / Self-Hosted)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" id="apiKeyGroup" style="display: none;">
+                            <label for="settingsApiKey">OpenAI API Key</label>
+                            <input type="password" id="settingsApiKey" class="form-input" placeholder="sk-...">
+                            <span class="form-help">Your API key is only stored in your local browser session and never shared.</span>
+                        </div>
+
+                        <div class="form-group" id="endpointGroup" style="display: none;">
+                            <label for="settingsEndpoint">Ollama Endpoint URL</label>
+                            <input type="text" id="settingsEndpoint" class="form-input" value="http://localhost:11434">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="settingsModelName">Model Identifier</label>
+                            <input type="text" id="settingsModelName" class="form-input" placeholder="e.g. gpt-4o or llama3">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="settingsTemp">Temperature (Creativity): <span id="tempVal">0.7</span></label>
+                            <input type="range" id="settingsTemp" min="0.0" max="1.0" step="0.05" value="0.7" class="range-slider">
+                        </div>
+
+                        <button class="btn-primary" id="saveSettingsBtn">
+                            <i data-lucide="save"></i> Save Settings
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <!-- Custom Candidate Modal -->
+    <div class="modal-overlay" id="customCandModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3><i data-lucide="file-plus"></i> Upload / Paste Custom Candidate Resume</h3>
+                <button class="modal-close" id="closeCandModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="customCandName">Candidate Full Name</label>
+                    <input type="text" id="customCandName" class="form-input" placeholder="e.g. Samantha Wu">
+                </div>
+                <div class="form-group">
+                    <label for="customCandTargetRole">Target Role</label>
+                    <input type="text" id="customCandTargetRole" class="form-input" placeholder="e.g. Backend Engineering Intern">
+                </div>
+                <div class="form-group">
+                    <label for="customCandResumeText">Raw Resume Text / Projects & Skills</label>
+                    <textarea id="customCandResumeText" rows="8" class="form-textarea" placeholder="Paste full resume text or project summaries here. Our semantic parser will extract technologies, skills, and coursework automatically."></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="cancelCandModal">Cancel</button>
+                <button class="btn-primary" id="saveCustomCandBtn">Save & Select Candidate</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Job Modal -->
+    <div class="modal-overlay" id="customJobModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3><i data-lucide="briefcase"></i> Add Custom Job Description</h3>
+                <button class="modal-close" id="closeJobModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="customJobTitle">Job Title</label>
+                    <input type="text" id="customJobTitle" class="form-input" placeholder="e.g. Data Science Intern">
+                </div>
+                <div class="form-group">
+                    <label for="customJobDept">Department / Team</label>
+                    <input type="text" id="customJobDept" class="form-input" placeholder="e.g. Analytics & Growth">
+                </div>
+                <div class="form-group">
+                    <label for="customJobText">Job Description & Requirements</label>
+                    <textarea id="customJobText" rows="8" class="form-textarea" placeholder="Paste job description, required skills, and preferred qualifications here."></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="cancelJobModal">Cancel</button>
+                <button class="btn-primary" id="saveCustomJobBtn">Save & Select Job</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Question Modal -->
+    <div class="modal-overlay" id="addQuestionModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3><i data-lucide="plus-circle"></i> Add Question to Question Bank</h3>
+                <button class="modal-close" id="closeQuestionModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="newQCategory">Category</label>
+                    <select id="newQCategory" class="form-select">
+                        <option value="Technical">Technical</option>
+                        <option value="Behavioral">Behavioral (STAR)</option>
+                        <option value="Situational / Scenario">Situational / Scenario</option>
+                        <option value="Resume Deep Dive">Resume Deep Dive</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="newQDomain">Domain</label>
+                    <input type="text" id="newQDomain" class="form-input" placeholder="e.g. Frontend Architecture, SQL, Concurrency">
+                </div>
+                <div class="form-group">
+                    <label for="newQSkills">Relevant Skills (comma-separated)</label>
+                    <input type="text" id="newQSkills" class="form-input" placeholder="e.g. React, TypeScript, Performance">
+                </div>
+                <div class="form-group">
+                    <label for="newQDifficulty">Difficulty</label>
+                    <select id="newQDifficulty" class="form-select">
+                        <option value="Foundational">Foundational</option>
+                        <option value="Standard Intern" selected>Standard Intern</option>
+                        <option value="Advanced Intern">Advanced Intern</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="newQText">Question Text</label>
+                    <textarea id="newQText" rows="3" class="form-textarea" placeholder="Enter the interview question..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="newQContext">Context / Evaluation Purpose</label>
+                    <input type="text" id="newQContext" class="form-input" placeholder="Why ask this question? What does it reveal?">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="cancelQuestionModal">Cancel</button>
+                <button class="btn-primary" id="saveNewQuestionBtn">Add to Bank</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Scorecard Result Modal -->
+    <div class="modal-overlay" id="scorecardResultModal">
+        <div class="modal-card modal-large">
+            <div class="modal-header">
+                <h3><i data-lucide="award"></i> Official Candidate Evaluation Summary</h3>
+                <button class="modal-close" id="closeScorecardModal">&times;</button>
+            </div>
+            <div class="modal-body" id="scorecardResultBody">
+                <!-- Dynamically populated -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="printScorecardBtn"><i data-lucide="printer"></i> Print Summary</button>
+                <button class="btn-primary" id="closeScorecardSuccessBtn">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

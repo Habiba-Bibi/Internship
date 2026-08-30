@@ -1,0 +1,31 @@
+{
+  "id": "job_fullstack_intern",
+  "title": "Full-Stack Software Engineer Intern",
+  "department": "Growth & Core Applications",
+  "level": "Internship / Co-op",
+  "duration": "12-14 Weeks",
+  "location": "Austin, TX / Hybrid",
+  "company_overview": "We build customer-facing web applications and creator tools that empower businesses to launch online stores and manage multi-channel sales seamlessly.",
+  "responsibilities": [
+    "Build and ship features from database models to frontend UI components.",
+    "Work across the stack with TypeScript, React, Next.js, Node.js, and PostgreSQL.",
+    "Participate in product requirement reviews, agile sprints, and pair programming sessions.",
+    "Ensure high performance, accessibility, and reliability across user workflows."
+  ],
+  "required_skills": [
+    "Proficiency in JavaScript / TypeScript and modern web standards.",
+    "Experience building user interfaces in React and backend services with Node.js/Express or Python.",
+    "Basic knowledge of SQL databases and CRUD operations.",
+    "Git version control and collaborative workflows."
+  ],
+  "preferred_skills": [
+    "Experience with Next.js App Router, Prisma ORM, and TailwindCSS.",
+    "Familiarity with cloud hosting platforms (Vercel, AWS) and Docker.",
+    "Understanding of authentication flows (OAuth, JWT)."
+  ],
+  "cultural_competencies": [
+    "Customer empathy and product intuition.",
+    "High agency, resourcefulness, and self-starter mentality.",
+    "Collaborative mindset and enthusiasm for peer code reviews."
+  ]
+}
