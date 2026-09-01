@@ -1,0 +1,314 @@
+{
+  "Python": {
+    "title": "Python for Data Science & Software Engineering",
+    "platform": "Coursera (IBM / DeepLearning.AI)",
+    "duration_weeks": 4,
+    "level": "Beginner",
+    "project": "Build an Automated Data Extraction & ETL Script with Unit Tests",
+    "certification": "PCEP - Certified Entry-Level Python Programmer"
+  },
+  "Machine Learning": {
+    "title": "Machine Learning Specialization",
+    "platform": "Coursera (Stanford Online & DeepLearning.AI)",
+    "duration_weeks": 8,
+    "level": "Intermediate",
+    "project": "End-to-End Customer Churn Prediction & Scoring API",
+    "certification": "DeepLearning.AI Machine Learning Certificate"
+  },
+  "Deep Learning": {
+    "title": "Deep Learning Specialization (Neural Networks, CNN, RNN)",
+    "platform": "Coursera (DeepLearning.AI)",
+    "duration_weeks": 8,
+    "level": "Advanced",
+    "project": "Medical Image Classification & Segmentation Model",
+    "certification": "DeepLearning.AI Deep Learning Specialization"
+  },
+  "TensorFlow": {
+    "title": "TensorFlow Developer Certificate Program",
+    "platform": "Coursera (DeepLearning.AI)",
+    "duration_weeks": 6,
+    "level": "Intermediate",
+    "project": "Real-time Object Detection with TensorFlow & OpenCV",
+    "certification": "Google TensorFlow Certified Developer"
+  },
+  "PyTorch": {
+    "title": "Deep Learning with PyTorch: Zero to GANs",
+    "platform": "edX / Jovian",
+    "duration_weeks": 6,
+    "level": "Intermediate",
+    "project": "Custom Transformer Model for Sentiment & Intent Analysis",
+    "certification": "PyTorch for Deep Learning Specialist"
+  },
+  "MLOps": {
+    "title": "Machine Learning Engineering for Production (MLOps)",
+    "platform": "Coursera (DeepLearning.AI)",
+    "duration_weeks": 6,
+    "level": "Advanced",
+    "project": "Continuous ML Training & Deployment Pipeline with MLflow & Docker",
+    "certification": "Databricks Certified MLOps Practitioner"
+  },
+  "Large Language Models": {
+    "title": "Generative AI with Large Language Models",
+    "platform": "Coursera (AWS & DeepLearning.AI)",
+    "duration_weeks": 4,
+    "level": "Advanced",
+    "project": "RAG (Retrieval-Augmented Generation) Assistant with LangChain & FAISS",
+    "certification": "Generative AI Specialist Certification"
+  },
+  "LangChain": {
+    "title": "LangChain for LLM Application Development",
+    "platform": "DeepLearning.AI Short Courses",
+    "duration_weeks": 3,
+    "level": "Advanced",
+    "project": "Autonomous Research Agent with Tool Calling & Memory",
+    "certification": "LangChain Certified Associate"
+  },
+  "React": {
+    "title": "Modern React with Redux & Hooks",
+    "platform": "Udemy (Stephen Grider) / freeCodeCamp",
+    "duration_weeks": 5,
+    "level": "Intermediate",
+    "project": "Full-Featured Collaborative Kanban Workspace with Real-time Sync",
+    "certification": "Meta Front-End Developer Professional Certificate"
+  },
+  "Node.js": {
+    "title": "Complete NodeJS Developer: REST, GraphQL, Microservices",
+    "platform": "Udemy (Zero To Mastery)",
+    "duration_weeks": 6,
+    "level": "Intermediate",
+    "project": "Scalable E-Commerce Backend API with Stripe & Rate Limiting",
+    "certification": "OpenJS Node.js Application Developer (JSNAD)"
+  },
+  "TypeScript": {
+    "title": "Understanding TypeScript: Modern TS from Scratch",
+    "platform": "Udemy (Maximilian Schwarzm\u00fcller)",
+    "duration_weeks": 4,
+    "level": "Intermediate",
+    "project": "Type-Safe Full-Stack SaaS Dashboard with Prisma & Next.js",
+    "certification": "TypeScript Professional Specialist"
+  },
+  "Next.js": {
+    "title": "Next.js 14 App Router: The Complete Guide",
+    "platform": "Udemy / Vercel Learn",
+    "duration_weeks": 4,
+    "level": "Intermediate",
+    "project": "Server-Side Rendered Multi-Tenant Blog & Knowledge Base",
+    "certification": "Vercel Next.js Developer Badge"
+  },
+  "GraphQL": {
+    "title": "GraphQL with Node, React & Apollo Client",
+    "platform": "Frontend Masters",
+    "duration_weeks": 3,
+    "level": "Intermediate",
+    "project": "Social Media Feed API with Subscriptions & Caching",
+    "certification": "Apollo GraphQL Associate"
+  },
+  "REST APIs": {
+    "title": "RESTful API Design, Security and Best Practices",
+    "platform": "Pluralsight",
+    "duration_weeks": 3,
+    "level": "Beginner",
+    "project": "Secure Banking API with JWT, OAuth2, and Swagger Documentation",
+    "certification": "Postman API Fundamentals Student Expert"
+  },
+  "Docker": {
+    "title": "Docker for Developers: Containerization & Compose",
+    "platform": "Udemy (Bret Fisher)",
+    "duration_weeks": 4,
+    "level": "Beginner",
+    "project": "Multi-Container Microservices Architecture with Healthchecks & Volumes",
+    "certification": "Docker Certified Associate (DCA)"
+  },
+  "Kubernetes": {
+    "title": "Certified Kubernetes Administrator (CKA) Mastery",
+    "platform": "Linux Foundation / KodeKloud",
+    "duration_weeks": 8,
+    "level": "Advanced",
+    "project": "Deploy High-Availability Cluster with Ingress, Auto-scaling & HPA",
+    "certification": "Certified Kubernetes Application Developer (CKAD)"
+  },
+  "Terraform": {
+    "title": "HashiCorp Certified: Terraform Associate",
+    "platform": "Udemy / KodeKloud",
+    "duration_weeks": 5,
+    "level": "Intermediate",
+    "project": "Automated Multi-Region Cloud VPC & Kubernetes Cluster Provisioning",
+    "certification": "HashiCorp Certified: Terraform Associate (003)"
+  },
+  "CI/CD": {
+    "title": "GitHub Actions & GitLab CI/CD for Modern DevOps",
+    "platform": "Udemy / Coursera",
+    "duration_weeks": 3,
+    "level": "Intermediate",
+    "project": "Automated Lint, Test, Security Scan, and Multi-Environment Deployment",
+    "certification": "GitHub Actions Certification"
+  },
+  "AWS": {
+    "title": "AWS Certified Solutions Architect Associate",
+    "platform": "Coursera / A Cloud Guru",
+    "duration_weeks": 8,
+    "level": "Intermediate",
+    "project": "Serverless Event-Driven Processing System with Lambda, SQS & DynamoDB",
+    "certification": "AWS Certified Solutions Architect - Associate (SAA-C03)"
+  },
+  "Linux": {
+    "title": "Linux Administration Fundamentals & Bash Shell Scripting",
+    "platform": "edX (Linux Foundation)",
+    "duration_weeks": 4,
+    "level": "Beginner",
+    "project": "Automated Server Health Monitoring, Log Rotation & Alerting Script",
+    "certification": "Red Hat Certified System Administrator (RHCSA)"
+  },
+  "Network Security": {
+    "title": "Network Security & Packet Analysis Deep Dive",
+    "platform": "Coursera (Google Cybersecurity Certificate)",
+    "duration_weeks": 6,
+    "level": "Beginner",
+    "project": "Intrusion Detection System Ruleset & Network Traffic Analyzer",
+    "certification": "CompTIA Security+ (SY0-701)"
+  },
+  "Penetration Testing": {
+    "title": "Practical Ethical Hacking & Web Application Penetration Testing",
+    "platform": "TCM Security / TryHackMe",
+    "duration_weeks": 8,
+    "level": "Advanced",
+    "project": "Vulnerability Assessment and Exploit Demonstration on Sandboxed Lab",
+    "certification": "Certified Ethical Hacker (CEH) / PNPT"
+  },
+  "SIEM": {
+    "title": "Splunk & SIEM Threat Detection Architecture",
+    "platform": "Coursera / Splunk Training",
+    "duration_weeks": 5,
+    "level": "Intermediate",
+    "project": "SOC Dashboard for Real-Time Brute-force & Ransomware Detection",
+    "certification": "Splunk Core Certified Power User"
+  },
+  "OWASP Top 10": {
+    "title": "Web Application Security & OWASP Top 10 Defense",
+    "platform": "PortSwigger Web Security Academy",
+    "duration_weeks": 4,
+    "level": "Intermediate",
+    "project": "Secure Code Audit and Remediation on Insecure Banking App",
+    "certification": "Certified Web Application Security Specialist"
+  },
+  "Flutter": {
+    "title": "Flutter & Dart - The Complete Guide (2024)",
+    "platform": "Udemy (Academind)",
+    "duration_weeks": 6,
+    "level": "Intermediate",
+    "project": "Cross-Platform Fitness Tracking App with Cloud Sync & Charts",
+    "certification": "Flutter Certified Application Developer"
+  },
+  "Kotlin": {
+    "title": "Android App Development with Kotlin & Jetpack Compose",
+    "platform": "Google Developers / Udacity",
+    "duration_weeks": 6,
+    "level": "Intermediate",
+    "project": "Material 3 News & Podcast App with Room Offline Database",
+    "certification": "Google Associate Android Developer"
+  },
+  "Swift": {
+    "title": "iOS 17 & Swift - The Complete iOS App Development Bootcamp",
+    "platform": "Udemy (Dr. Angela Yu)",
+    "duration_weeks": 8,
+    "level": "Intermediate",
+    "project": "SwiftUI Social Networking App with CoreLocation & WidgetKit",
+    "certification": "App Development with Swift Certified User"
+  },
+  "SQL": {
+    "title": "Advanced SQL for Data Engineers & Analysts",
+    "platform": "Coursera (UC Davis) / LeetCode Database",
+    "duration_weeks": 4,
+    "level": "Beginner",
+    "project": "Complex Analytical Data Warehouse Modeling & Window Functions",
+    "certification": "PostgreSQL Professional Certified Developer"
+  },
+  "Apache Spark": {
+    "title": "Taming Big Data with Apache Spark & Python (PySpark)",
+    "platform": "Udemy (Frank Kane) / Databricks Academy",
+    "duration_weeks": 6,
+    "level": "Advanced",
+    "project": "Streaming Analytics Pipeline processing 100k IoT messages/sec",
+    "certification": "Databricks Certified Associate Developer for Apache Spark"
+  },
+  "Airflow": {
+    "title": "Apache Airflow: The Hands-On Guide for Data Engineers",
+    "platform": "Astronomer Academy / Udemy",
+    "duration_weeks": 4,
+    "level": "Intermediate",
+    "project": "Orchestrated Multi-Source ETL Pipeline with Slack Error Alerts",
+    "certification": "Astronomer Certified DAG Author"
+  },
+  "Snowflake": {
+    "title": "Snowflake Masterclass: Complete Cloud Data Warehouse",
+    "platform": "Coursera / Snowflake Hands-on",
+    "duration_weeks": 4,
+    "level": "Intermediate",
+    "project": "Zero-Copy Clone Data Architecture with Role-Based Access Controls",
+    "certification": "Snowflake SnowPro Core Certification"
+  },
+  "Tableau": {
+    "title": "Tableau Desktop Specialist & Data Storytelling",
+    "platform": "Coursera (UC Davis) / Tableau Academy",
+    "duration_weeks": 4,
+    "level": "Beginner",
+    "project": "Executive Sales & Operational Performance KPI Interactive Dashboard",
+    "certification": "Tableau Desktop Specialist"
+  },
+  "Power BI": {
+    "title": "Microsoft Power BI Data Analyst (PL-300) Prep",
+    "platform": "Microsoft Learn / Coursera",
+    "duration_weeks": 5,
+    "level": "Intermediate",
+    "project": "Financial Forecast Model with DAX Measures & Automated Refresh",
+    "certification": "Microsoft Certified: Power BI Data Analyst (PL-300)"
+  },
+  "Data Visualization": {
+    "title": "Data Visualization & Communication with Storytelling",
+    "platform": "edX / Harvard Online",
+    "duration_weeks": 3,
+    "level": "Beginner",
+    "project": "Public Sector Impact Analysis Report with Interactive Visuals",
+    "certification": "Storytelling with Data Certificate"
+  },
+  "C++": {
+    "title": "Modern C++ Programming (C++17 / C++20)",
+    "platform": "Coursera / Udemy",
+    "duration_weeks": 6,
+    "level": "Intermediate",
+    "project": "High-Performance Concurrency Engine with Smart Pointers & Templates",
+    "certification": "C++ Certified Associate Programmer (CPA)"
+  },
+  "Microcontrollers": {
+    "title": "Embedded Systems Programming: ARM Cortex-M & STM32",
+    "platform": "edX (UT Austin) / FastBit Embedded",
+    "duration_weeks": 8,
+    "level": "Intermediate",
+    "project": "I2C/SPI Sensor Driver with Interrupt-Driven Bare-Metal Firmware",
+    "certification": "Embedded Systems Professional Certification"
+  },
+  "RTOS": {
+    "title": "Mastering RTOS: Hands-On FreeRTOS with STM32",
+    "platform": "Udemy (FastBit)",
+    "duration_weeks": 6,
+    "level": "Advanced",
+    "project": "Multi-Tasking Smart Home Gateway with Mutexes & Queue Management",
+    "certification": "Real-Time Embedded Specialist"
+  },
+  "Problem Solving": {
+    "title": "Algorithms and Data Structures Masterclass",
+    "platform": "Coursera (Princeton) / LeetCode",
+    "duration_weeks": 6,
+    "level": "Intermediate",
+    "project": "Custom Graph Pathfinding & Optimization Algorithm Library",
+    "certification": "Competitive Programmer Certificate"
+  },
+  "Agile & Scrum": {
+    "title": "Applied Scrum for Agile Project Management",
+    "platform": "Coursera (University of Maryland)",
+    "duration_weeks": 2,
+    "level": "Beginner",
+    "project": "Sprint Planning, Backlog Refinement & Burndown Chart Setup in Jira",
+    "certification": "Scrum Alliance Certified ScrumMaster (CSM)"
+  }
+}

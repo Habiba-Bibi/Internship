@@ -1,0 +1,554 @@
+{
+  "Python": {
+    "name": "Python",
+    "category": "Programming Languages",
+    "domain": "AI & Machine Learning",
+    "difficulty": "Beginner"
+  },
+  "JavaScript": {
+    "name": "JavaScript",
+    "category": "Programming Languages",
+    "domain": "Full Stack Web Development",
+    "difficulty": "Intermediate"
+  },
+  "TypeScript": {
+    "name": "TypeScript",
+    "category": "Programming Languages",
+    "domain": "Full Stack Web Development",
+    "difficulty": "Intermediate"
+  },
+  "C": {
+    "name": "C",
+    "category": "Programming Languages",
+    "domain": "Embedded Systems & IoT",
+    "difficulty": "Intermediate"
+  },
+  "C++": {
+    "name": "C++",
+    "category": "Programming Languages",
+    "domain": "Embedded Systems & IoT",
+    "difficulty": "Intermediate"
+  },
+  "Kotlin": {
+    "name": "Kotlin",
+    "category": "Programming Languages",
+    "domain": "Mobile Application Development",
+    "difficulty": "Intermediate"
+  },
+  "Swift": {
+    "name": "Swift",
+    "category": "Programming Languages",
+    "domain": "Mobile Application Development",
+    "difficulty": "Intermediate"
+  },
+  "Dart": {
+    "name": "Dart",
+    "category": "Programming Languages",
+    "domain": "Mobile Application Development",
+    "difficulty": "Intermediate"
+  },
+  "SQL": {
+    "name": "SQL",
+    "category": "Programming Languages",
+    "domain": "Full Stack Web Development",
+    "difficulty": "Beginner"
+  },
+  "Bash Scripting": {
+    "name": "Bash Scripting",
+    "category": "Programming Languages",
+    "domain": "Cloud Architecture & DevOps",
+    "difficulty": "Intermediate"
+  },
+  "React": {
+    "name": "React",
+    "category": "Frameworks & Libraries",
+    "domain": "Full Stack Web Development",
+    "difficulty": "Intermediate"
+  },
+  "Node.js": {
+    "name": "Node.js",
+    "category": "Frameworks & Libraries",
+    "domain": "Full Stack Web Development",
+    "difficulty": "Intermediate"
+  },
+  "Express.js": {
+    "name": "Express.js",
+    "category": "Frameworks & Libraries",
+    "domain": "Full Stack Web Development",
+    "difficulty": "Intermediate"
+  },
+  "Next.js": {
+    "name": "Next.js",
+    "category": "Frameworks & Libraries",
+    "domain": "Full Stack Web Development",
+    "difficulty": "Intermediate"
+  },
+  "Flutter": {
+    "name": "Flutter",
+    "category": "Frameworks & Libraries",
+    "domain": "Mobile Application Development",
+    "difficulty": "Intermediate"
+  },
+  "React Native": {
+    "name": "React Native",
+    "category": "Frameworks & Libraries",
+    "domain": "Mobile Application Development",
+    "difficulty": "Intermediate"
+  },
+  "TensorFlow": {
+    "name": "TensorFlow",
+    "category": "Frameworks & Libraries",
+    "domain": "AI & Machine Learning",
+    "difficulty": "Intermediate"
+  },
+  "PyTorch": {
+    "name": "PyTorch",
+    "category": "Frameworks & Libraries",
+    "domain": "AI & Machine Learning",
+    "difficulty": "Intermediate"
+  },
+  "scikit-learn": {
+    "name": "scikit-learn",
+    "category": "Frameworks & Libraries",
+    "domain": "AI & Machine Learning",
+    "difficulty": "Intermediate"
+  },
+  "Pandas": {
+    "name": "Pandas",
+    "category": "Frameworks & Libraries",
+    "domain": "AI & Machine Learning",
+    "difficulty": "Intermediate"
+  },
+  "NumPy": {
+    "name": "NumPy",
+    "category": "Frameworks & Libraries",
+    "domain": "AI & Machine Learning",
+    "difficulty": "Intermediate"
+  },
+  "Hugging Face": {
+    "name": "Hugging Face",
+    "category": "Frameworks & Libraries",
+    "domain": "AI & Machine Learning",
+    "difficulty": "Intermediate"
+  },
+  "LangChain": {
+    "name": "LangChain",
+    "category": "Frameworks & Libraries",
+    "domain": "AI & Machine Learning",
+    "difficulty": "Intermediate"
+  },
+  "FastAPI": {
+    "name": "FastAPI",
+    "category": "Frameworks & Libraries",
+    "domain": "AI & Machine Learning",
+    "difficulty": "Intermediate"
+  },
+  "Redux": {
+    "name": "Redux",
+    "category": "Frameworks & Libraries",
+    "domain": "Full Stack Web Development",
+    "difficulty": "Intermediate"
+  },
+  "GraphQL": {
+    "name": "GraphQL",
+    "category": "Frameworks & Libraries",
+    "domain": "Full Stack Web Development",
+    "difficulty": "Intermediate"
+  },
+  "Docker": {
+    "name": "Docker",
+    "category": "Cloud & DevOps",
+    "domain": "AI & Machine Learning",
+    "difficulty": "Intermediate"
+  },
+  "Kubernetes": {
+    "name": "Kubernetes",
+    "category": "Cloud & DevOps",
+    "domain": "Cloud Architecture & DevOps",
+    "difficulty": "Advanced"
+  },
+  "CI/CD": {
+    "name": "CI/CD",
+    "category": "Cloud & DevOps",
+    "domain": "Cloud Architecture & DevOps",
+    "difficulty": "Intermediate"
+  },
+  "Terraform": {
+    "name": "Terraform",
+    "category": "Cloud & DevOps",
+    "domain": "Cloud Architecture & DevOps",
+    "difficulty": "Advanced"
+  },
+  "AWS": {
+    "name": "AWS",
+    "category": "Cloud & DevOps",
+    "domain": "Cloud Architecture & DevOps",
+    "difficulty": "Intermediate"
+  },
+  "Azure": {
+    "name": "Azure",
+    "category": "Cloud & DevOps",
+    "domain": "Cloud Architecture & DevOps",
+    "difficulty": "Intermediate"
+  },
+  "GCP": {
+    "name": "GCP",
+    "category": "Cloud & DevOps",
+    "domain": "Cloud Architecture & DevOps",
+    "difficulty": "Intermediate"
+  },
+  "Linux": {
+    "name": "Linux",
+    "category": "Cloud & DevOps",
+    "domain": "Cloud Architecture & DevOps",
+    "difficulty": "Beginner"
+  },
+  "Ansible": {
+    "name": "Ansible",
+    "category": "Cloud & DevOps",
+    "domain": "Cloud Architecture & DevOps",
+    "difficulty": "Intermediate"
+  },
+  "Helm": {
+    "name": "Helm",
+    "category": "Cloud & DevOps",
+    "domain": "Cloud Architecture & DevOps",
+    "difficulty": "Intermediate"
+  },
+  "Prometheus": {
+    "name": "Prometheus",
+    "category": "Cloud & DevOps",
+    "domain": "Cloud Architecture & DevOps",
+    "difficulty": "Intermediate"
+  },
+  "Grafana": {
+    "name": "Grafana",
+    "category": "Cloud & DevOps",
+    "domain": "Cloud Architecture & DevOps",
+    "difficulty": "Intermediate"
+  },
+  "MLflow": {
+    "name": "MLflow",
+    "category": "Cloud & DevOps",
+    "domain": "AI & Machine Learning",
+    "difficulty": "Intermediate"
+  },
+  "MLOps": {
+    "name": "MLOps",
+    "category": "Cloud & DevOps",
+    "domain": "AI & Machine Learning",
+    "difficulty": "Intermediate"
+  },
+  "PostgreSQL": {
+    "name": "PostgreSQL",
+    "category": "Databases & Big Data",
+    "domain": "Full Stack Web Development",
+    "difficulty": "Intermediate"
+  },
+  "MongoDB": {
+    "name": "MongoDB",
+    "category": "Databases & Big Data",
+    "domain": "Full Stack Web Development",
+    "difficulty": "Intermediate"
+  },
+  "Redis": {
+    "name": "Redis",
+    "category": "Databases & Big Data",
+    "domain": "Full Stack Web Development",
+    "difficulty": "Intermediate"
+  },
+  "Apache Spark": {
+    "name": "Apache Spark",
+    "category": "Databases & Big Data",
+    "domain": "Data Engineering & Big Data",
+    "difficulty": "Advanced"
+  },
+  "Apache Kafka": {
+    "name": "Apache Kafka",
+    "category": "Databases & Big Data",
+    "domain": "Data Engineering & Big Data",
+    "difficulty": "Intermediate"
+  },
+  "Airflow": {
+    "name": "Airflow",
+    "category": "Databases & Big Data",
+    "domain": "Data Engineering & Big Data",
+    "difficulty": "Intermediate"
+  },
+  "Snowflake": {
+    "name": "Snowflake",
+    "category": "Databases & Big Data",
+    "domain": "Data Engineering & Big Data",
+    "difficulty": "Intermediate"
+  },
+  "dbt": {
+    "name": "dbt",
+    "category": "Databases & Big Data",
+    "domain": "Data Engineering & Big Data",
+    "difficulty": "Intermediate"
+  },
+  "Hadoop": {
+    "name": "Hadoop",
+    "category": "Databases & Big Data",
+    "domain": "Data Engineering & Big Data",
+    "difficulty": "Intermediate"
+  },
+  "PySpark": {
+    "name": "PySpark",
+    "category": "Databases & Big Data",
+    "domain": "Data Engineering & Big Data",
+    "difficulty": "Intermediate"
+  },
+  "Data Warehousing": {
+    "name": "Data Warehousing",
+    "category": "Databases & Big Data",
+    "domain": "Data Engineering & Big Data",
+    "difficulty": "Intermediate"
+  },
+  "ETL": {
+    "name": "ETL",
+    "category": "Databases & Big Data",
+    "domain": "Data Engineering & Big Data",
+    "difficulty": "Intermediate"
+  },
+  "Network Security": {
+    "name": "Network Security",
+    "category": "Cybersecurity & Networking",
+    "domain": "Cybersecurity & Network Defense",
+    "difficulty": "Intermediate"
+  },
+  "Cryptography": {
+    "name": "Cryptography",
+    "category": "Cybersecurity & Networking",
+    "domain": "Cybersecurity & Network Defense",
+    "difficulty": "Intermediate"
+  },
+  "Penetration Testing": {
+    "name": "Penetration Testing",
+    "category": "Cybersecurity & Networking",
+    "domain": "Cybersecurity & Network Defense",
+    "difficulty": "Advanced"
+  },
+  "SIEM": {
+    "name": "SIEM",
+    "category": "Cybersecurity & Networking",
+    "domain": "Cybersecurity & Network Defense",
+    "difficulty": "Intermediate"
+  },
+  "Incident Response": {
+    "name": "Incident Response",
+    "category": "Cybersecurity & Networking",
+    "domain": "Cybersecurity & Network Defense",
+    "difficulty": "Intermediate"
+  },
+  "OWASP Top 10": {
+    "name": "OWASP Top 10",
+    "category": "Cybersecurity & Networking",
+    "domain": "Cybersecurity & Network Defense",
+    "difficulty": "Intermediate"
+  },
+  "Firewalls": {
+    "name": "Firewalls",
+    "category": "Cybersecurity & Networking",
+    "domain": "Cybersecurity & Network Defense",
+    "difficulty": "Intermediate"
+  },
+  "TCP/IP": {
+    "name": "TCP/IP",
+    "category": "Cybersecurity & Networking",
+    "domain": "Cybersecurity & Network Defense",
+    "difficulty": "Intermediate"
+  },
+  "Vulnerability Assessment": {
+    "name": "Vulnerability Assessment",
+    "category": "Cybersecurity & Networking",
+    "domain": "Cybersecurity & Network Defense",
+    "difficulty": "Intermediate"
+  },
+  "Wireshark": {
+    "name": "Wireshark",
+    "category": "Cybersecurity & Networking",
+    "domain": "Cybersecurity & Network Defense",
+    "difficulty": "Intermediate"
+  },
+  "Burp Suite": {
+    "name": "Burp Suite",
+    "category": "Cybersecurity & Networking",
+    "domain": "Cybersecurity & Network Defense",
+    "difficulty": "Intermediate"
+  },
+  "Splunk": {
+    "name": "Splunk",
+    "category": "Cybersecurity & Networking",
+    "domain": "Cybersecurity & Network Defense",
+    "difficulty": "Intermediate"
+  },
+  "Microcontrollers": {
+    "name": "Microcontrollers",
+    "category": "Embedded & Hardware",
+    "domain": "Embedded Systems & IoT",
+    "difficulty": "Intermediate"
+  },
+  "RTOS": {
+    "name": "RTOS",
+    "category": "Embedded & Hardware",
+    "domain": "Embedded Systems & IoT",
+    "difficulty": "Advanced"
+  },
+  "Embedded C": {
+    "name": "Embedded C",
+    "category": "Embedded & Hardware",
+    "domain": "Embedded Systems & IoT",
+    "difficulty": "Intermediate"
+  },
+  "UART/SPI/I2C Protocols": {
+    "name": "UART/SPI/I2C Protocols",
+    "category": "Embedded & Hardware",
+    "domain": "Embedded Systems & IoT",
+    "difficulty": "Intermediate"
+  },
+  "FreeRTOS": {
+    "name": "FreeRTOS",
+    "category": "Embedded & Hardware",
+    "domain": "Embedded Systems & IoT",
+    "difficulty": "Intermediate"
+  },
+  "Embedded Linux": {
+    "name": "Embedded Linux",
+    "category": "Embedded & Hardware",
+    "domain": "Embedded Systems & IoT",
+    "difficulty": "Intermediate"
+  },
+  "BLE / Zigbee": {
+    "name": "BLE / Zigbee",
+    "category": "Embedded & Hardware",
+    "domain": "Embedded Systems & IoT",
+    "difficulty": "Intermediate"
+  },
+  "MQTT": {
+    "name": "MQTT",
+    "category": "Embedded & Hardware",
+    "domain": "Embedded Systems & IoT",
+    "difficulty": "Intermediate"
+  },
+  "ARM Architecture": {
+    "name": "ARM Architecture",
+    "category": "Embedded & Hardware",
+    "domain": "Embedded Systems & IoT",
+    "difficulty": "Intermediate"
+  },
+  "Tableau": {
+    "name": "Tableau",
+    "category": "Business Intelligence & Analytics",
+    "domain": "Data Engineering & Big Data",
+    "difficulty": "Intermediate"
+  },
+  "Power BI": {
+    "name": "Power BI",
+    "category": "Business Intelligence & Analytics",
+    "domain": "Business Intelligence & Analytics",
+    "difficulty": "Intermediate"
+  },
+  "Data Visualization": {
+    "name": "Data Visualization",
+    "category": "Business Intelligence & Analytics",
+    "domain": "Business Intelligence & Analytics",
+    "difficulty": "Intermediate"
+  },
+  "Exploratory Data Analysis": {
+    "name": "Exploratory Data Analysis",
+    "category": "Business Intelligence & Analytics",
+    "domain": "Business Intelligence & Analytics",
+    "difficulty": "Intermediate"
+  },
+  "A/B Testing": {
+    "name": "A/B Testing",
+    "category": "Business Intelligence & Analytics",
+    "domain": "Business Intelligence & Analytics",
+    "difficulty": "Intermediate"
+  },
+  "Cohort Analysis": {
+    "name": "Cohort Analysis",
+    "category": "Business Intelligence & Analytics",
+    "domain": "Business Intelligence & Analytics",
+    "difficulty": "Intermediate"
+  },
+  "DAX": {
+    "name": "DAX",
+    "category": "Business Intelligence & Analytics",
+    "domain": "Business Intelligence & Analytics",
+    "difficulty": "Intermediate"
+  },
+  "Business Metrics": {
+    "name": "Business Metrics",
+    "category": "Business Intelligence & Analytics",
+    "domain": "Business Intelligence & Analytics",
+    "difficulty": "Intermediate"
+  },
+  "Excel & Spreadsheets": {
+    "name": "Excel & Spreadsheets",
+    "category": "Business Intelligence & Analytics",
+    "domain": "Business Intelligence & Analytics",
+    "difficulty": "Beginner"
+  },
+  "Problem Solving": {
+    "name": "Problem Solving",
+    "category": "Soft Skills & Methodologies",
+    "domain": "General Tech",
+    "difficulty": "Beginner"
+  },
+  "Critical Thinking": {
+    "name": "Critical Thinking",
+    "category": "Soft Skills & Methodologies",
+    "domain": "General Tech",
+    "difficulty": "Beginner"
+  },
+  "Agile & Scrum": {
+    "name": "Agile & Scrum",
+    "category": "Soft Skills & Methodologies",
+    "domain": "General Tech",
+    "difficulty": "Beginner"
+  },
+  "Communication": {
+    "name": "Communication",
+    "category": "Soft Skills & Methodologies",
+    "domain": "General Tech",
+    "difficulty": "Beginner"
+  },
+  "Team Collaboration": {
+    "name": "Team Collaboration",
+    "category": "Soft Skills & Methodologies",
+    "domain": "General Tech",
+    "difficulty": "Beginner"
+  },
+  "Time Management": {
+    "name": "Time Management",
+    "category": "Soft Skills & Methodologies",
+    "domain": "General Tech",
+    "difficulty": "Beginner"
+  },
+  "Code Documentation": {
+    "name": "Code Documentation",
+    "category": "Soft Skills & Methodologies",
+    "domain": "General Tech",
+    "difficulty": "Beginner"
+  },
+  "Technical Writing": {
+    "name": "Technical Writing",
+    "category": "Soft Skills & Methodologies",
+    "domain": "General Tech",
+    "difficulty": "Beginner"
+  },
+  "Adaptability": {
+    "name": "Adaptability",
+    "category": "Soft Skills & Methodologies",
+    "domain": "General Tech",
+    "difficulty": "Beginner"
+  },
+  "Presentation Skills": {
+    "name": "Presentation Skills",
+    "category": "Soft Skills & Methodologies",
+    "domain": "General Tech",
+    "difficulty": "Beginner"
+  }
+}

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillBridge AI - Intern Skills & Industry Demand Gap Intelligence</title>
+    <meta name="description" content="AI-powered NLP & K-Means clustering platform analyzing intern skill sets against industry job postings to identify competency gaps and provide actionable upskilling roadmaps.">
+    <meta name="keywords" content="Skill Gap Analysis, NLP, K-Means Clustering, TF-IDF, Intern Upskilling, Job Market Intelligence">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand-header">
+                <div class="brand-logo">
+                    <i class="fa-solid fa-brain-circuit"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">SkillBridge<span class="gradient-text">AI</span></span>
+                    <span class="brand-badge">NLP & Clustering</span>
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <button class="nav-item active" data-tab="overview" id="nav-overview">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Market Overview</span>
+                </button>
+                <button class="nav-item" data-tab="clusters" id="nav-clusters">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <span>Cluster Intelligence</span>
+                </button>
+                <button class="nav-item" data-tab="interns" id="nav-interns">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    <span>Intern Explorer</span>
+                </button>
+                <button class="nav-item" data-tab="jobs" id="nav-jobs">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Industry Jobs</span>
+                </button>
+                <button class="nav-item" data-tab="simulator" id="nav-simulator">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>Live Skill Analyzer</span>
+                </button>
+                <button class="nav-item" data-tab="catalog" id="nav-catalog">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Training Catalog</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="model-badge">
+                    <div class="status-indicator"></div>
+                    <div class="model-info">
+                        <div class="model-title">Model: TF-IDF + K-Means</div>
+                        <div class="model-sub">Silhouette Score: 0.1765 (k=8)</div>
+                    </div>
+                </div>
+                <button class="theme-toggle-btn" id="theme-toggle" title="Toggle Dark/Light Mode">
+                    <i class="fa-solid fa-sun light-icon"></i>
+                    <i class="fa-solid fa-moon dark-icon"></i>
+                    <span id="theme-text">Light Mode</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <h1 class="page-title" id="page-title">Industry Demand & Intern Skills Intelligence</h1>
+                    <p class="page-subtitle" id="page-subtitle">NLP-driven analysis identifying critical tech skill deficiencies and personalized curriculum roadmaps.</p>
+                </div>
+                <div class="header-right">
+                    <div class="header-stat-chip">
+                        <i class="fa-solid fa-users"></i>
+                        <span>350 Interns Analyzed</span>
+                    </div>
+                    <div class="header-stat-chip">
+                        <i class="fa-solid fa-building"></i>
+                        <span>650 Job Postings</span>
+                    </div>
+                    <button class="btn-primary" id="btn-quick-analyze" onclick="switchTab('simulator')">
+                        <i class="fa-solid fa-bolt"></i> Test Resume / Skills
+                    </button>
+                </div>
+            </header>
+
+            <!-- TAB 1: OVERVIEW -->
+            <section class="tab-pane active" id="pane-overview">
+                <!-- KPI Cards -->
+                <div class="kpi-grid">
+                    <div class="kpi-card glass-card">
+                        <div class="kpi-icon icon-blue">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <div class="kpi-body">
+                            <div class="kpi-label">Average Match Readiness</div>
+                            <div class="kpi-value gradient-text" id="kpi-avg-readiness">67.4%</div>
+                            <div class="kpi-trend positive"><i class="fa-solid fa-arrow-trend-up"></i> Across 8 Tech Domains</div>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card glass-card">
+                        <div class="kpi-icon icon-purple">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                        <div class="kpi-body">
+                            <div class="kpi-label">Highest Deficit Skill</div>
+                            <div class="kpi-value text-warning" id="kpi-high-gap">Docker / K8s</div>
+                            <div class="kpi-trend negative"><i class="fa-solid fa-arrow-down"></i> 34.2% Market Gap</div>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card glass-card">
+                        <div class="kpi-icon icon-emerald">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div class="kpi-body">
+                            <div class="kpi-label">Discovered Archetypes</div>
+                            <div class="kpi-value" id="kpi-clusters">8 Clusters</div>
+                            <div class="kpi-trend neutral"><i class="fa-solid fa-check"></i> Silhouette Verified</div>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card glass-card">
+                        <div class="kpi-icon icon-amber">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <div class="kpi-body">
+                            <div class="kpi-label">Curated Upskilling Modules</div>
+                            <div class="kpi-value" id="kpi-courses">39 Courses</div>
+                            <div class="kpi-trend positive"><i class="fa-solid fa-certificate"></i> Projects & Certs Included</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Row 1: Deficit Comparison & Domain Distribution -->
+                <div class="grid-2-col">
+                    <div class="glass-card chart-card">
+                        <div class="card-header">
+                            <div class="card-title-group">
+                                <h3 class="card-title">Market Deficit: Industry Demand vs Intern Supply</h3>
+                                <p class="card-subtitle">Comparing skill demand percentages in job postings against intern candidate supply.</p>
+                            </div>
+                            <span class="badge badge-accent">Top 12 Skills</span>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="chart-demand-supply"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="glass-card chart-card">
+                        <div class="card-header">
+                            <div class="card-title-group">
+                                <h3 class="card-title">Industry Domain Distribution</h3>
+                                <p class="card-subtitle">Job postings volume vs available intern talent across technical specializations.</p>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="chart-domain-dist"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Macro Deficit Summary Table -->
+                <div class="glass-card table-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <h3 class="card-title">Detailed Tech Skill Gap Deficit Analysis</h3>
+                            <p class="card-subtitle">Quantified net difference between employer hiring criteria and university intern competencies.</p>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="custom-table" id="table-skill-gaps">
+                            <thead>
+                                <tr>
+                                    <th>Skill Name</th>
+                                    <th>Industry Demand (%)</th>
+                                    <th>Intern Supply (%)</th>
+                                    <th>Deficit Gap</th>
+                                    <th>Market Status</th>
+                                    <th>Recommended Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-skill-gaps">
+                                <!-- Populated dynamically by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 2: CLUSTER INTELLIGENCE -->
+            <section class="tab-pane" id="pane-clusters">
+                <div class="glass-card chart-card full-height-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <h3 class="card-title">2D PCA Cluster Space (NLP TF-IDF & K-Means Projection)</h3>
+                            <p class="card-subtitle">Dimensionality-reduced representation showing how 650 industry jobs (circles) and 350 interns (diamonds) map into 8 distinct technical archetypes.</p>
+                        </div>
+                        <div class="cluster-legend-controls" id="cluster-filter-buttons">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                    <div class="chart-container-large">
+                        <canvas id="chart-pca-clusters"></canvas>
+                    </div>
+                </div>
+
+                <!-- Cluster Profile Cards Grid -->
+                <div class="section-title-bar">
+                    <h2 class="section-title">Discovered Career Archetypes & Centroid Signatures</h2>
+                    <p class="section-subtitle">TF-IDF weighted feature terms distinguishing each K-Means cluster.</p>
+                </div>
+                <div class="cluster-cards-grid" id="cluster-cards-container">
+                    <!-- Populated dynamically -->
+                </div>
+            </section>
+
+            <!-- TAB 3: INTERN EXPLORER -->
+            <section class="tab-pane" id="pane-interns">
+                <div class="glass-card table-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <h3 class="card-title">Intern Talent Directory & Gap Diagnostics</h3>
+                            <p class="card-subtitle">Select any intern candidate to inspect their radar match profile, skill deficits, and custom 12-week roadmap.</p>
+                        </div>
+                        <div class="table-filter-bar">
+                            <div class="search-box">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="text" id="intern-search-input" placeholder="Search by name, skill, university, or role...">
+                            </div>
+                            <select id="intern-domain-filter" class="custom-select">
+                                <option value="">All Domains</option>
+                                <option value="AI & Machine Learning">AI & Machine Learning</option>
+                                <option value="Full Stack Web Development">Full Stack Web Development</option>
+                                <option value="Cloud Architecture & DevOps">Cloud Architecture & DevOps</option>
+                                <option value="Cybersecurity & Network Defense">Cybersecurity & Network Defense</option>
+                                <option value="Mobile Application Development">Mobile Application Development</option>
+                                <option value="Data Engineering & Big Data">Data Engineering & Big Data</option>
+                                <option value="Business Intelligence & Analytics">Business Intelligence & Analytics</option>
+                                <option value="Embedded Systems & IoT">Embedded Systems & IoT</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="custom-table" id="table-interns">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Intern Name</th>
+                                    <th>University & Degree</th>
+                                    <th>Target Role</th>
+                                    <th>Skills Overview</th>
+                                    <th>Cluster Assignment</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-interns">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 4: INDUSTRY JOBS -->
+            <section class="tab-pane" id="pane-jobs">
+                <div class="glass-card table-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <h3 class="card-title">Industry Job Market Benchmark Database</h3>
+                            <p class="card-subtitle">650 real-world job postings used to train the TF-IDF feature space and derive cluster requirements.</p>
+                        </div>
+                        <div class="table-filter-bar">
+                            <div class="search-box">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="text" id="job-search-input" placeholder="Search by job title, company, or tech stack...">
+                            </div>
+                            <select id="job-domain-filter" class="custom-select">
+                                <option value="">All Domains</option>
+                                <option value="AI & Machine Learning">AI & Machine Learning</option>
+                                <option value="Full Stack Web Development">Full Stack Web Development</option>
+                                <option value="Cloud Architecture & DevOps">Cloud Architecture & DevOps</option>
+                                <option value="Cybersecurity & Network Defense">Cybersecurity & Network Defense</option>
+                                <option value="Mobile Application Development">Mobile Application Development</option>
+                                <option value="Data Engineering & Big Data">Data Engineering & Big Data</option>
+                                <option value="Business Intelligence & Analytics">Business Intelligence & Analytics</option>
+                                <option value="Embedded Systems & IoT">Embedded Systems & IoT</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="custom-table" id="table-jobs">
+                            <thead>
+                                <tr>
+                                    <th>Job ID</th>
+                                    <th>Job Title</th>
+                                    <th>Company & Sector</th>
+                                    <th>Location</th>
+                                    <th>Experience</th>
+                                    <th>Required Skills</th>
+                                    <th>Salary Range</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-jobs">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 5: LIVE SIMULATOR -->
+            <section class="tab-pane" id="pane-simulator">
+                <div class="simulator-layout">
+                    <!-- Left Form -->
+                    <div class="glass-card form-card">
+                        <div class="card-header">
+                            <div class="card-title-group">
+                                <h3 class="card-title"><i class="fa-solid fa-wand-magic-sparkles gradient-text"></i> Real-Time Skill Gap Diagnostic Simulator</h3>
+                                <p class="card-subtitle">Input your skill set or paste a resume summary, choose a target industry role, and receive an instant NLP-powered gap evaluation and 12-week training roadmap.</p>
+                            </div>
+                        </div>
+
+                        <form id="simulator-form" onsubmit="event.preventDefault(); runCustomAnalysis();">
+                            <div class="form-group">
+                                <label for="sim-target-role">Target Job Role / Career Track</label>
+                                <select id="sim-target-role" class="custom-input custom-select">
+                                    <option value="Machine Learning Engineer">Machine Learning Engineer (AI & ML)</option>
+                                    <option value="Data Scientist">Data Scientist (AI & Analytics)</option>
+                                    <option value="Full Stack Developer">Full Stack Developer (Web & Cloud)</option>
+                                    <option value="DevOps Engineer">DevOps & Cloud Engineer</option>
+                                    <option value="Cybersecurity Analyst">Cybersecurity & SOC Analyst</option>
+                                    <option value="Mobile App Developer">Mobile App Developer (Flutter/iOS)</option>
+                                    <option value="Data Engineer">Data Engineer (Big Data & Pipelines)</option>
+                                    <option value="Business Intelligence Analyst">Business Intelligence Analyst</option>
+                                    <option value="Embedded Software Engineer">Embedded Software & IoT Engineer</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sim-skills-input">Your Current Technical Skills (Comma-separated)</label>
+                                <textarea id="sim-skills-input" class="custom-textarea" rows="3" placeholder="e.g. Python, Git, SQL, Pandas, HTML5, Communication">Python, SQL, Git, Data Analysis, Pandas, Problem Solving</textarea>
+                                <div class="quick-preset-tags">
+                                    <span class="preset-label">Quick Presets:</span>
+                                    <button type="button" class="tag-btn" onclick="applyPreset('ai')">AI/Data Intern</button>
+                                    <button type="button" class="tag-btn" onclick="applyPreset('web')">Web Intern</button>
+                                    <button type="button" class="tag-btn" onclick="applyPreset('cloud')">DevOps Intern</button>
+                                    <button type="button" class="tag-btn" onclick="applyPreset('sec')">Security Intern</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sim-bio-input">Resume Summary / Bio (Optional for deeper semantic matching)</label>
+                                <textarea id="sim-bio-input" class="custom-textarea" rows="3" placeholder="Paste your short resume summary, completed projects, or background...">B.S. in Computer Science student with coursework in algorithms, data structures, and database systems. Built a movie recommendation system and a SQL data pipeline.</textarea>
+                            </div>
+
+                            <button type="submit" class="btn-primary full-width" id="btn-run-sim">
+                                <i class="fa-solid fa-microchip"></i> Run NLP Skill Gap Analysis
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Right Results Container -->
+                    <div class="glass-card result-card" id="simulator-results-placeholder">
+                        <div class="empty-state">
+                            <div class="empty-icon"><i class="fa-solid fa-chart-radar"></i></div>
+                            <h3>Awaiting Analysis Input</h3>
+                            <p>Click "Run NLP Skill Gap Analysis" to calculate your readiness match score, radar competency graph, and tailored 12-week upskilling roadmap.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card result-card hidden" id="simulator-results-content">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 6: TRAINING CATALOG -->
+            <section class="tab-pane" id="pane-catalog">
+                <div class="catalog-header-bar glass-card">
+                    <div class="search-box wide">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="catalog-search-input" placeholder="Search training courses by skill name, platform, project type, or certification...">
+                    </div>
+                    <div class="catalog-stats">
+                        <span class="badge badge-primary" id="catalog-count-badge">39 Courses Available</span>
+                    </div>
+                </div>
+
+                <div class="courses-grid" id="courses-grid-container">
+                    <!-- Populated dynamically -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- MODAL: INTERN DETAIL & PERSONALIZED ROADMAP -->
+    <div class="modal-backdrop" id="intern-modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-container glass-card">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <h2 class="modal-title" id="modal-intern-name">Intern Name</h2>
+                    <div class="modal-badges" id="modal-intern-meta">
+                        <!-- Badges -->
+                    </div>
+                </div>
+                <button class="modal-close-btn" onclick="closeInternModal()">&times;</button>
+            </div>
+
+            <div class="modal-body" id="modal-intern-content">
+                <!-- Dynamic Content (Radar Chart + Deficits + 3-Phase Roadmap) -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Custom App JS -->
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+{
+  "0": {
+    "cluster_id": 0,
+    "cluster_name": "Cybersecurity & Network Defense (Network, Security)",
+    "dominant_domain": "Cybersecurity & Network Defense",
+    "job_count": 78,
+    "intern_count": 42,
+    "top_terms": [
+      "network",
+      "security",
+      "defense",
+      "cybersecurity network",
+      "network defense",
+      "cybersecurity",
+      "kali",
+      "kali linux",
+      "nessus",
+      "wireshark",
+      "snort",
+      "metasploit"
+    ],
+    "top_roles": [
+      "Associate Penetration Tester",
+      "Junior Cybersecurity Analyst",
+      "Associate Threat Intelligence Analyst"
+    ],
+    "top_demanded_skills": {
+      "Cryptography": 45,
+      "TCP/IP": 45,
+      "Linux": 43,
+      "Network Security": 42,
+      "Vulnerability Assessment": 38,
+      "Firewalls": 36,
+      "Security Fundamentals": 36,
+      "Python": 36
+    },
+    "centroid_2d": [
+      -0.07530780343768645,
+      -0.2736733958203856
+    ]
+  },
+  "1": {
+    "cluster_id": 1,
+    "cluster_name": "Business Intelligence & Analytics (Business, Powerbi)",
+    "dominant_domain": "Business Intelligence & Analytics",
+    "job_count": 93,
+    "intern_count": 44,
+    "top_terms": [
+      "business",
+      "powerbi",
+      "analytics",
+      "business intelligence",
+      "tableau",
+      "intelligence analytics",
+      "desktop",
+      "tableau desktop",
+      "powerbi service",
+      "intelligence",
+      "metabase",
+      "service"
+    ],
+    "top_roles": [
+      "Junior Data Analyst",
+      "Junior Marketing Analytics Intern",
+      "Associate Business Intelligence Analyst"
+    ],
+    "top_demanded_skills": {
+      "SQL": 53,
+      "Tableau": 50,
+      "Statistics": 48,
+      "Power BI": 48,
+      "Exploratory Data Analysis": 47,
+      "Data Visualization": 45,
+      "Excel & Spreadsheets": 44,
+      "Business Metrics": 42
+    },
+    "centroid_2d": [
+      -0.278237764026735,
+      0.36057956657037216
+    ]
+  },
+  "2": {
+    "cluster_id": 2,
+    "cluster_name": "Mobile Application Development (Mobile, Application Development)",
+    "dominant_domain": "Mobile Application Development",
+    "job_count": 103,
+    "intern_count": 47,
+    "top_terms": [
+      "mobile",
+      "application development",
+      "mobile application",
+      "gradle",
+      "application",
+      "figma",
+      "android",
+      "fastlane",
+      "cocoapods",
+      "android studio",
+      "studio",
+      "development"
+    ],
+    "top_roles": [
+      "Mobile Software Intern",
+      "Junior Android Developer",
+      "Junior Mobile Software Intern"
+    ],
+    "top_demanded_skills": {
+      "State Management": 54,
+      "Dart": 54,
+      "Mobile UI Design": 53,
+      "Swift": 50,
+      "REST APIs": 43,
+      "Kotlin": 43,
+      "React Native": 39,
+      "Git": 37
+    },
+    "centroid_2d": [
+      0.4337354056385798,
+      0.14774239463518193
+    ]
+  },
+  "3": {
+    "cluster_id": 3,
+    "cluster_name": "Data Engineering & Big Data (Data, Kafka)",
+    "dominant_domain": "Data Engineering & Big Data",
+    "job_count": 78,
+    "intern_count": 48,
+    "top_terms": [
+      "data",
+      "kafka",
+      "engineering big",
+      "data engineering",
+      "big data",
+      "big",
+      "redshift",
+      "databricks",
+      "kafka connect",
+      "connect",
+      "apache",
+      "aws s3"
+    ],
+    "top_roles": [
+      "Data Pipeline Intern",
+      "Junior Data Engineer",
+      "Junior Data Platform Engineer"
+    ],
+    "top_demanded_skills": {
+      "ETL": 44,
+      "Git": 43,
+      "Data Pipelines": 42,
+      "Linux": 41,
+      "SQL": 41,
+      "Python": 37,
+      "Data Warehousing": 35,
+      "Relational Databases": 34
+    },
+    "centroid_2d": [
+      -0.11119672258756037,
+      0.03114297183916742
+    ]
+  },
+  "4": {
+    "cluster_id": 4,
+    "cluster_name": "AI & Machine Learning (Learning, Machine)",
+    "dominant_domain": "AI & Machine Learning",
+    "job_count": 81,
+    "intern_count": 36,
+    "top_terms": [
+      "learning",
+      "machine",
+      "machine learning",
+      "ai machine",
+      "ai",
+      "aws sagemaker",
+      "sagemaker",
+      "cuda",
+      "mlflow",
+      "fastapi",
+      "aws",
+      "biases"
+    ],
+    "top_roles": [
+      "Associate Deep Learning Specialist",
+      "Junior Computer Vision Engineer",
+      "AI Research Intern"
+    ],
+    "top_demanded_skills": {
+      "Machine Learning": 33,
+      "Data Analysis": 33,
+      "Python": 32,
+      "TensorFlow": 32,
+      "scikit-learn": 32,
+      "NumPy": 31,
+      "Mathematics": 30,
+      "AWS SageMaker": 30
+    },
+    "centroid_2d": [
+      -0.12817063390825154,
+      0.006531888415634021
+    ]
+  },
+  "5": {
+    "cluster_id": 5,
+    "cluster_name": "Cloud Architecture & DevOps (Cloud, Devops)",
+    "dominant_domain": "Cloud Architecture & DevOps",
+    "job_count": 78,
+    "intern_count": 44,
+    "top_terms": [
+      "cloud",
+      "devops",
+      "terraform",
+      "cloud architecture",
+      "architecture devops",
+      "jenkins",
+      "architecture",
+      "terraform cloud",
+      "datadog",
+      "gitlab ci",
+      "gitlab",
+      "ci"
+    ],
+    "top_roles": [
+      "Associate DevOps Engineer",
+      "Junior DevOps Intern",
+      "Associate Site Reliability Engineer (SRE)"
+    ],
+    "top_demanded_skills": {
+      "CI/CD": 47,
+      "Docker": 44,
+      "Cloud Computing": 43,
+      "Kubernetes": 40,
+      "Bash Scripting": 37,
+      "Linux": 35,
+      "Networking Basics": 35,
+      "Git": 34
+    },
+    "centroid_2d": [
+      -0.06446468133570692,
+      -0.29073297984980967
+    ]
+  },
+  "6": {
+    "cluster_id": 6,
+    "cluster_name": "Embedded Systems & IoT (Embedded, Systems Iot)",
+    "dominant_domain": "Embedded Systems & IoT",
+    "job_count": 58,
+    "intern_count": 42,
+    "top_terms": [
+      "embedded",
+      "systems iot",
+      "embedded systems",
+      "iot",
+      "analyzer",
+      "logic analyzer",
+      "logic",
+      "systems",
+      "keil uvision",
+      "uvision",
+      "keil",
+      "platformio"
+    ],
+    "top_roles": [
+      "Robotics Software Intern",
+      "Junior IoT Systems Engineer",
+      "Junior Robotics Software Intern"
+    ],
+    "top_demanded_skills": {
+      "RTOS": 33,
+      "UART/SPI/I2C Protocols": 31,
+      "Microcontrollers": 31,
+      "C": 30,
+      "Embedded C": 30,
+      "C++": 29,
+      "Linux": 28,
+      "Electronics Fundamentals": 24
+    },
+    "centroid_2d": [
+      -0.01394971245062119,
+      -0.12345587587367216
+    ]
+  },
+  "7": {
+    "cluster_id": 7,
+    "cluster_name": "Full Stack Web Development (Web, Full)",
+    "dominant_domain": "Full Stack Web Development",
+    "job_count": 81,
+    "intern_count": 47,
+    "top_terms": [
+      "web",
+      "full",
+      "full stack",
+      "web development",
+      "stack web",
+      "vite",
+      "stack",
+      "vercel",
+      "redis",
+      "github",
+      "actions",
+      "github actions"
+    ],
+    "top_roles": [
+      "Junior Backend Developer",
+      "Associate React / Node.js Developer",
+      "Associate Full Stack Developer"
+    ],
+    "top_demanded_skills": {
+      "SQL": 42,
+      "HTML5": 35,
+      "TypeScript": 35,
+      "Git": 34,
+      "React": 34,
+      "JavaScript": 31,
+      "CSS3": 27,
+      "Node.js": 27
+    },
+    "centroid_2d": [
+      0.1477514582292769,
+      -0.006487197538784861
+    ]
+  }
+}
