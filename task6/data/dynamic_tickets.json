@@ -1,0 +1,64 @@
+[
+  {
+    "id": "TCK-1015",
+    "ticket_number": "TICKET-1015",
+    "title": "Automated Test Ticket: Docker port binding collision",
+    "description": "Port 8000 failed to bind during integration test",
+    "category": "Environment & Dependencies",
+    "priority": "High",
+    "status": "In Progress",
+    "intern_name": "Test Runner",
+    "error_log": "",
+    "root_cause": "",
+    "solution_steps": "",
+    "verified_resolution": "",
+    "tags": [
+      "docker",
+      "automated-test"
+    ],
+    "assigned_mentor": "Pending Mentor Assignment",
+    "replies": [
+      {
+        "author": "InternAI System",
+        "role": "Bot",
+        "message": "Support ticket #TICKET-1015 created and escalated to the technical mentorship queue.",
+        "timestamp": "2026-09-02T20:39:24.796664"
+      },
+      {
+        "author": "Mentor Dave",
+        "role": "Lead Mentor",
+        "message": "Please kill dangling python process on port 8000.",
+        "timestamp": "2026-09-02T20:39:24.959433"
+      }
+    ],
+    "created_at": "2026-09-02T20:39:24.796664"
+  },
+  {
+    "id": "TCK-1014",
+    "ticket_number": "TICKET-1014",
+    "title": "Automated Test Ticket: Docker port binding collision",
+    "description": "Port 8000 failed to bind during integration test",
+    "category": "Environment & Dependencies",
+    "priority": "High",
+    "status": "Open",
+    "intern_name": "Test Runner",
+    "error_log": "",
+    "root_cause": "",
+    "solution_steps": "",
+    "verified_resolution": "",
+    "tags": [
+      "docker",
+      "automated-test"
+    ],
+    "assigned_mentor": "Pending Mentor Assignment",
+    "replies": [
+      {
+        "author": "InternAI System",
+        "role": "Bot",
+        "message": "Support ticket #TICKET-1014 created and escalated to the technical mentorship queue.",
+        "timestamp": "2026-09-02T20:38:21.046799"
+      }
+    ],
+    "created_at": "2026-09-02T20:38:21.046799"
+  }
+]

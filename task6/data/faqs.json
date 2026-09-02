@@ -1,0 +1,344 @@
+[
+  {
+    "id": "FAQ-001",
+    "category": "Weekly Tasks & Submissions",
+    "question": "How do I submit my weekly internship tasks?",
+    "answer": "To submit your weekly task: \n1. Push your final code to your designated GitHub task branch (e.g., `feature/task-3-nlp`).\n2. Open a Pull Request (PR) to the `main` branch of your team/personal repository.\n3. Complete the PR description template including Task Summary, Testing Evidence, and Loom video link.\n4. Copy the PR URL and submit it into the Intern Portal submission form before Sunday 11:59 PM UTC.",
+    "keywords": ["submit task", "submission process", "weekly submission", "pull request", "submit assignment", "intern portal form"],
+    "sample_queries": [
+      "Where do I submit my task for this week?",
+      "How to submit weekly assignment?",
+      "Submission steps for task 2",
+      "How to hand in my work?"
+    ],
+    "suggested_actions": ["Submit PR Link in Portal", "Review PR Template Guide"],
+    "last_updated": "2026-08-15"
+  },
+  {
+    "id": "FAQ-002",
+    "category": "GitHub & Version Control",
+    "question": "What is the mandatory Git branch naming convention?",
+    "answer": "All branches must follow the standard naming pattern: `<type>/<task-number>-<short-description>`.\nExamples:\n- `feature/task-1-data-pipeline`\n- `bugfix/task-2-cors-error`\n- `docs/task-4-readme-update`\nDo NOT push directly to `main` or `staging`. Direct pushes to protected branches are blocked by CI/CD branch protection rules.",
+    "keywords": ["branch name", "git naming convention", "branch rules", "git workflow", "feature branch"],
+    "sample_queries": [
+      "What should I name my git branch?",
+      "Branch naming conventions for tasks",
+      "How to name my feature branch?"
+    ],
+    "suggested_actions": ["Check Git Guidelines", "Rename Branch: git branch -m"],
+    "last_updated": "2026-08-10"
+  },
+  {
+    "id": "FAQ-003",
+    "category": "Deadlines & Extensions",
+    "question": "What is the deadline for weekly task submissions and is there a grace period?",
+    "answer": "Weekly task deadlines are strictly every **Sunday at 11:59 PM UTC**.\n- A standard **3-hour grace period** applies automatically until Monday 02:59 AM UTC with zero penalty.\n- Submissions made between 3 to 24 hours late incur a **10% grade deduction**.\n- Submissions past 24 hours without prior coordinator approval will receive a score of 0 for that milestone.",
+    "keywords": ["deadline", "due date", "late submission", "grace period", "extension", "penalty", "due time"],
+    "sample_queries": [
+      "When is the weekly task due?",
+      "Is there a grace period for submission?",
+      "What happens if I submit 1 hour late?",
+      "Late submission policy"
+    ],
+    "suggested_actions": ["Request 24h Emergency Extension", "View Deadline Calendar"],
+    "last_updated": "2026-08-12"
+  },
+  {
+    "id": "FAQ-004",
+    "category": "Deadlines & Extensions",
+    "question": "How do I request an official deadline extension?",
+    "answer": "If you experience medical emergencies or severe unavoidable circumstances:\n1. Submit an extension request via the Support Desk at least **12 hours before the deadline**.\n2. Select category `Deadlines & Extensions` and mark priority as `High`.\n3. Attach relevant proof or explanation.\n4. Coordinators typically review and grant 24h to 48h extensions within 4 hours.",
+    "keywords": ["request extension", "medical leave", "emergency extension", "deadline delay", "need more time"],
+    "sample_queries": [
+      "I need an extension for my task",
+      "How can I ask for extra time?",
+      "Emergency extension procedure",
+      "I am sick and cannot submit on time"
+    ],
+    "suggested_actions": ["Create Extension Ticket", "Contact Mentor on Slack"],
+    "last_updated": "2026-08-20"
+  },
+  {
+    "id": "FAQ-005",
+    "category": "Certificates & Program Completion",
+    "question": "What are the minimum eligibility criteria to receive the Internship Certificate of Completion?",
+    "answer": "To be eligible for the Certificate of Completion and digital badge:\n1. **Task Completion**: Successfully submit at least 85% of all weekly assigned tasks.\n2. **Overall Grade**: Maintain a cumulative evaluation score of at least **75% (Grade B or above)**.\n3. **Capstone / Final Project**: Pass the final capstone review with a verified demonstration.\n4. **Attendance**: Attend at least 70% of mentor sync sessions or submit watch-back reviews.",
+    "keywords": ["certificate", "certificate eligibility", "passing criteria", "internship completion", "certificate of completion", "graduate"],
+    "sample_queries": [
+      "How do I qualify for the internship certificate?",
+      "What is the passing grade to get certified?",
+      "Certificate requirements",
+      "Will I get a certificate if I miss one task?"
+    ],
+    "suggested_actions": ["Check Gradebook Status", "Verify Certificate Verification Portal"],
+    "last_updated": "2026-08-22"
+  },
+  {
+    "id": "FAQ-006",
+    "category": "Certificates & Program Completion",
+    "question": "When and how will certificates and letters of recommendation (LOR) be issued?",
+    "answer": "Certificates and verified digital credentials are automatically generated via Credly / Accredible within **7 business days** following the official graduation cohort date. Letters of Recommendation (LOR) are granted to the **top 15% top performers** upon request to their primary mentor.",
+    "keywords": ["certificate release date", "LOR", "letter of recommendation", "receive certificate", "credly badge"],
+    "sample_queries": [
+      "When will I receive my certificate?",
+      "How to get a letter of recommendation?",
+      "Where is my digital certificate sent?"
+    ],
+    "suggested_actions": ["Request LOR Review", "Update LinkedIn Profile"],
+    "last_updated": "2026-08-25"
+  },
+  {
+    "id": "FAQ-007",
+    "category": "Grading & Evaluations",
+    "question": "How are weekly tasks evaluated and graded?",
+    "answer": "Each task is graded out of 100 points based on our standardized 4-pillar rubric:\n- **Functionality & Core Requirements (40 pts)**: All acceptance criteria met without bugs.\n- **Code Quality & Architecture (25 pts)**: Clean code, modular structure, typing, linting, no code smells.\n- **Documentation & Tests (20 pts)**: Comprehensive README, API docs, automated unit tests (>75% coverage).\n- **Demo & Presentation (15 pts)**: Clear 2-3 minute video walkthrough or deployment demo link.",
+    "keywords": ["grading rubric", "evaluation criteria", "how tasks are graded", "points breakdown", "score calculation"],
+    "sample_queries": [
+      "How do mentors grade our code?",
+      "What is the grading rubric?",
+      "Why did I lose points on my task?",
+      "Evaluation breakdown"
+    ],
+    "suggested_actions": ["Review Grading Rubric Document", "Schedule Grade Review Office Hour"],
+    "last_updated": "2026-08-18"
+  },
+  {
+    "id": "FAQ-008",
+    "category": "Grading & Evaluations",
+    "question": "Can I resubmit a task if I received a low score or failed a milestone?",
+    "answer": "Yes. If your task received a score below 70%, you have a **48-hour resubmission window** following mentor feedback release. You can address mentor review comments, push commits to the same PR, and comment `@mentor please re-evaluate`. A maximum capped score of 85% is awarded on resubmissions.",
+    "keywords": ["resubmit task", "re-evaluation", "improve grade", "resubmission policy", "failed task"],
+    "sample_queries": [
+      "Can I resubmit my code to get a higher score?",
+      "How does task resubmission work?",
+      "Can I fix review comments for more marks?"
+    ],
+    "suggested_actions": ["Request Re-Evaluation", "View Mentor PR Comments"],
+    "last_updated": "2026-08-19"
+  },
+  {
+    "id": "FAQ-009",
+    "category": "GitHub & Version Control",
+    "question": "What should I do if my Pull Request fails the automated GitHub Actions CI/CD check?",
+    "answer": "If GitHub Actions fails:\n1. Click on the red 'Details' link next to the failed check in your PR.\n2. Expand the failed step (e.g., `Run Linter`, `Execute Pytest`, `Build Frontend`).\n3. Identify the error locally and reproduce it (e.g., run `flake8 .` or `npm run lint` or `pytest`).\n4. Fix the issue locally, commit, and push to your branch. GitHub Actions will automatically re-run.",
+    "keywords": ["github actions failed", "ci cd check failing", "pr checks red", "lint error github", "pytest failure"],
+    "sample_queries": [
+      "Why is my GitHub Actions check failing?",
+      "How to fix red cross in PR?",
+      "CI build failed on GitHub",
+      "Automated test failed on commit"
+    ],
+    "suggested_actions": ["View GitHub Actions Log", "Run Local Linter: flake8 ."],
+    "last_updated": "2026-08-14"
+  },
+  {
+    "id": "FAQ-010",
+    "category": "GitHub & Version Control",
+    "question": "What commit message format is required?",
+    "answer": "We enforce the **Conventional Commits standard**:\nFormat: `<type>(<scope>): <subject>`\nValid types:\n- `feat`: A new feature (e.g., `feat(auth): add jwt token authentication`)\n- `fix`: A bug fix (e.g., `fix(chat): resolve websocket timeout on reconnect`)\n- `docs`: Documentation only changes\n- `style`: Formatting, missing semi colons, etc.\n- `refactor`: Code change that neither fixes a bug nor adds a feature\n- `test`: Adding or correcting tests",
+    "keywords": ["commit format", "conventional commits", "commit message rules", "git commit message", "commit syntax"],
+    "sample_queries": [
+      "How to write commit messages?",
+      "What is the commit message rule?",
+      "Git commit convention guide"
+    ],
+    "suggested_actions": ["Conventional Commits Cheat Sheet"],
+    "last_updated": "2026-08-08"
+  },
+  {
+    "id": "FAQ-011",
+    "category": "Mentorship & Office Hours",
+    "question": "How do I schedule a 1-on-1 office hour with my assigned technical mentor?",
+    "answer": "Mentors hold weekly dedicated office hours.\n1. Navigate to the Mentorship portal tab or use your mentor's Calendly link located in the `#announcements` channel.\n2. Choose an open 20-minute slot.\n3. Provide a brief 2-sentence summary of the blocker and your repo link.\n4. Show up prepared with your code and reproducible error logs.",
+    "keywords": ["mentor office hours", "book 1-on-1", "schedule call", "talk to mentor", "calendly link"],
+    "sample_queries": [
+      "How can I book a call with my mentor?",
+      "Where is mentor office hour link?",
+      "I need 1 on 1 help with my code"
+    ],
+    "suggested_actions": ["Open Calendly Booking", "Post in #mentor-help Slack Channel"],
+    "last_updated": "2026-08-21"
+  },
+  {
+    "id": "FAQ-012",
+    "category": "Weekly Tasks & Submissions",
+    "question": "Is a video demo required for every weekly task submission?",
+    "answer": "Yes, a **2 to 3-minute video walkthrough** (using Loom, YouTube Unlisted, or Google Drive) is required for full presentation marks. Your demo should show:\n1. Running application / API in action.\n2. Brief walkthrough of the architecture & key functions.\n3. Automated tests running and passing in terminal.",
+    "keywords": ["loom video", "demo video", "walkthrough requirement", "video submission", "record demo"],
+    "sample_queries": [
+      "Do I need to record a Loom video for task?",
+      "How long should the demo video be?",
+      "Is video walkthrough compulsory?"
+    ],
+    "suggested_actions": ["Download Loom Screen Recorder", "PR Video Template Checklist"],
+    "last_updated": "2026-08-16"
+  },
+  {
+    "id": "FAQ-013",
+    "category": "Environment & Tooling",
+    "question": "What Python and Node.js versions are recommended for the internship stack?",
+    "answer": "The recommended reference environment is:\n- **Python**: 3.10.x to 3.12.x (ensure virtual environment `python -m venv venv` is active)\n- **Node.js**: 18.x LTS or 20.x LTS\n- **Docker**: Docker Desktop 4.20+\nAlways lock your dependencies using `requirements.txt` / `poetry.lock` or `package-lock.json`.",
+    "keywords": ["python version", "node version", "environment setup", "recommended tools", "system requirements"],
+    "sample_queries": [
+      "Which version of python should I use?",
+      "Node version compatibility",
+      "Prerequisites for local setup"
+    ],
+    "suggested_actions": ["Download Python 3.11", "Download Node 20 LTS"],
+    "last_updated": "2026-08-05"
+  },
+  {
+    "id": "FAQ-014",
+    "category": "Environment & Tooling",
+    "question": "How do I safely manage secrets and API keys without committing them to GitHub?",
+    "answer": "Never commit sensitive API keys or credentials to version control!\n1. Store all keys in a local `.env` file.\n2. Ensure `.env` is listed in your `.gitignore` file.\n3. Provide a `.env.example` file in your repository with dummy placeholder values (e.g., `OPENAI_API_KEY=your_key_here`).\n4. If a secret is accidentally committed, revoke it immediately and purge commit history using `git-filter-repo`.",
+    "keywords": ["api keys", "secrets management", ".env file", ".gitignore", "exposed api key", "security"],
+    "sample_queries": [
+      "Where should I put my API keys?",
+      "How to avoid pushing .env file?",
+      "I accidentally committed my secret key to github"
+    ],
+    "suggested_actions": ["Setup .env.example", "Check .gitignore rules"],
+    "last_updated": "2026-08-11"
+  },
+  {
+    "id": "FAQ-015",
+    "category": "Mentorship & Office Hours",
+    "question": "Where should I ask quick technical questions during the week?",
+    "answer": "For immediate community and mentor support:\n- Post in `#technical-doubts` on the community Discord/Slack.\n- Include: (1) what you are trying to achieve, (2) the exact error message or stack trace, (3) what you have already tried.\n- If your question is not resolved within 2 hours, submit a ticket on this Support Desk to escalate to senior staff.",
+    "keywords": ["slack channel", "discord help", "ask questions", "community support", "where to get help"],
+    "sample_queries": [
+      "Where to post my code doubts?",
+      "Which slack channel for help?",
+      "Can someone help me debug my code?"
+    ],
+    "suggested_actions": ["Join #technical-doubts Channel", "Submit Support Ticket"],
+    "last_updated": "2026-08-23"
+  },
+  {
+    "id": "FAQ-016",
+    "category": "Weekly Tasks & Submissions",
+    "question": "Can I work in a team or pair-program on weekly tasks?",
+    "answer": "Weekly foundation tasks (Weeks 1-4) must be completed individually to ensure foundational mastery. For the Capstone Project (Weeks 5-8), you will be assigned to a collaborative pod of 3-4 interns with designated project manager and technical leads.",
+    "keywords": ["team work", "group project", "pair programming", "capstone team", "individual submission"],
+    "sample_queries": [
+      "Can I do weekly tasks with a partner?",
+      "Is the internship individual or team based?",
+      "When do group projects start?"
+    ],
+    "suggested_actions": ["View Capstone Pod Guidelines"],
+    "last_updated": "2026-08-24"
+  },
+  {
+    "id": "FAQ-017",
+    "category": "Grading & Evaluations",
+    "question": "When are weekly task grades and mentor code reviews released?",
+    "answer": "Mentors complete all code reviews within **72 hours** after the Sunday deadline (by Wednesday 11:59 PM UTC). You will receive an automated notification email and GitHub PR review comments with granular rubric scores.",
+    "keywords": ["grades release", "when will marks be given", "mentor review timeline", "score release date"],
+    "sample_queries": [
+      "When will my task be graded?",
+      "How long does mentor review take?",
+      "Where can I see my score?"
+    ],
+    "suggested_actions": ["Check Gradebook Tab", "Check GitHub PR Reviews"],
+    "last_updated": "2026-08-26"
+  },
+  {
+    "id": "FAQ-018",
+    "category": "Certificates & Program Completion",
+    "question": "Is this internship recognized and will I get a LinkedIn verifiable badge?",
+    "answer": "Yes. Our program certificates include a unique verifiable SHA-256 verification hash and direct 1-click LinkedIn Add-to-Profile credential integration. Prospective employers can verify your credential authenticity directly on our public verification portal.",
+    "keywords": ["linkedin badge", "certificate verification", "verified credential", "accreditation", "add to linkedin"],
+    "sample_queries": [
+      "Can I add this certificate to LinkedIn?",
+      "How will employers verify my certificate?",
+      "Is the certificate recognized?"
+    ],
+    "suggested_actions": ["View Sample Certificate", "Verify ID Portal"],
+    "last_updated": "2026-08-27"
+  },
+  {
+    "id": "FAQ-019",
+    "category": "GitHub & Version Control",
+    "question": "How do I sync my forked repository with the upstream master repository?",
+    "answer": "To sync your fork with upstream updates:\n```bash\ngit remote add upstream https://github.com/organization/main-repo.git\ngit fetch upstream\ngit checkout main\ngit merge upstream/main\ngit push origin main\n```\nAlways sync before creating a new weekly task branch.",
+    "keywords": ["sync fork", "upstream repo", "git fetch upstream", "keep fork updated", "git merge upstream"],
+    "sample_queries": [
+      "How do I update my forked repo?",
+      "How to pull latest changes from upstream?",
+      "Syncing fork with main repository"
+    ],
+    "suggested_actions": ["Run Git Sync Commands", "View Forking Guide"],
+    "last_updated": "2026-08-28"
+  },
+  {
+    "id": "FAQ-020",
+    "category": "Deadlines & Extensions",
+    "question": "What should I do if I miss the submission deadline due to internet or power outages?",
+    "answer": "If you experience sudden infrastructure failure:\n1. Take a screenshot or timestamp proof of your local git commit history (`git log -n 1`).\n2. Immediately email `support@internship.org` or open an urgent ticket via mobile.\n3. As long as your last local git commit was made prior to 11:59 PM UTC, no late penalty will be applied.",
+    "keywords": ["internet outage", "power cut", "missed deadline proof", "git log timestamp", "emergency submission"],
+    "sample_queries": [
+      "My internet went down before deadline",
+      "Can I submit late if power was out?",
+      "How to prove I finished on time?"
+    ],
+    "suggested_actions": ["Submit Timestamp Proof Ticket"],
+    "last_updated": "2026-08-29"
+  },
+  {
+    "id": "FAQ-021",
+    "category": "GitHub & Version Control",
+    "question": "How do I configure SSH keys for GitHub to avoid password authentication errors?",
+    "answer": "GitHub no longer supports account passwords for Git operations:\n1. Generate an Ed25519 SSH key in terminal:\n   `ssh-keygen -t ed25519 -C \"your_email@example.com\"`\n2. Copy the public key:\n   - Windows PowerShell: `Get-Content ~/.ssh/id_ed25519.pub | Set-Clipboard`\n   - macOS: `pbcopy < ~/.ssh/id_ed25519.pub`\n3. In GitHub: Go to `Settings` -> `SSH and GPG keys` -> `New SSH Key` -> Paste and Save.\n4. Test connection: `ssh -T git@github.com`.",
+    "keywords": ["ssh key", "github authentication", "permission denied publickey", "git ssh setup", "ssh ed25519"],
+    "sample_queries": [
+      "How to setup SSH keys for github?",
+      "Permission denied publickey git error",
+      "GitHub password authentication deprecated"
+    ],
+    "suggested_actions": ["Run ssh-keygen", "Open GitHub SSH Settings"],
+    "last_updated": "2026-08-30"
+  },
+  {
+    "id": "FAQ-022",
+    "category": "Weekly Tasks & Submissions",
+    "question": "What is the policy on using AI code assistants (e.g., Copilot, ChatGPT, Claude) for weekly tasks?",
+    "answer": "AI assistants are permitted as learning and acceleration tools, but strictly under these guidelines:\n1. You must thoroughly understand every line of code submitted and be able to defend design choices during live code reviews.\n2. Direct verbatim copying of generated solutions without adaptation is strictly prohibited.\n3. Include an 'AI Attribution & Disclosure' section in your PR description documenting the prompts and tools utilized.",
+    "keywords": ["ai policy", "chatgpt policy", "copilot rules", "ai code usage", "plagiarism"],
+    "sample_queries": [
+      "Are we allowed to use ChatGPT or GitHub Copilot?",
+      "What is the AI coding policy?",
+      "Will I get penalized for using AI tools?"
+    ],
+    "suggested_actions": ["Review Academic Integrity Policy", "Fill PR AI Disclosure Form"],
+    "last_updated": "2026-08-31"
+  },
+  {
+    "id": "FAQ-023",
+    "category": "Mentorship & Office Hours",
+    "question": "What is the expected response time (SLA) for mentor questions and ticket resolutions?",
+    "answer": "Our technical mentorship and coordinator SLAs are:\n- **#technical-doubts Slack/Discord**: Within 2 to 4 business hours.\n- **Support Tickets (High Priority)**: Within 4 business hours.\n- **Support Tickets (Normal / Low)**: Within 12 to 24 business hours.\n- **PR Code Review & Evaluation**: Within 72 hours following the submission deadline.",
+    "keywords": ["sla", "response time", "how fast mentors reply", "mentor availability", "ticket turnaround"],
+    "sample_queries": [
+      "How long does it take for a mentor to reply?",
+      "What is the support ticket response time?",
+      "When can I expect help with my blocker?"
+    ],
+    "suggested_actions": ["View Support SLA Matrix", "Escalate Stalled Ticket"],
+    "last_updated": "2026-09-01"
+  },
+  {
+    "id": "FAQ-024",
+    "category": "Certificates & Program Completion",
+    "question": "Can I request an official Letter of Enrollment / Internship Verification Letter for my university or employer?",
+    "answer": "Yes. If your university requires proof of active internship enrollment for academic credits (CPT, OPT, or college course requirement):\n1. Submit a ticket under category `Certificates & Program Completion`.\n2. Include your university name, department coordinator email, and any custom university form templates.\n3. The coordinator team will issue a signed official verification letter on company letterhead within **48 hours**.",
+    "keywords": ["verification letter", "college credits", "proof of enrollment", "university letter", "cpt opt"],
+    "sample_queries": [
+      "I need a letter for my university credits",
+      "How to get proof of internship enrollment?",
+      "Can the coordinator sign my college internship form?"
+    ],
+    "suggested_actions": ["Request University Verification Letter", "Upload College Form Template"],
+    "last_updated": "2026-09-02"
+  }
+]
